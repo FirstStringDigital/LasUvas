@@ -1,0 +1,33 @@
+.nav-logo {
+    width: 10%;
+    padding-top: 5px;
+}
+
+.icon-wrapper {
+    display: inline-block;
+}
+
+.nav-icon {
+    color: #900561;
+    font-size: 25px;
+    margin: 10px 5px;
+}
+
+@media (max-width: 991px) {
+    .nav-logo {
+        width: 12%;
+    }
+    .nav-icon-col {
+        text-align: right;
+    }
+
+    .nav-icon {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-logo {
+        width: 23%;
+    }
+}
