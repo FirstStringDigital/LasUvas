@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import MissionStyle from'./mission.module.scss'
@@ -6,7 +7,7 @@ import { Col } from 'react-bootstrap'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import MainBkgd from '../images/main-background.png'
 
-const MissionPage = () => {
+const MissionPage = ({data}) => {
     return (
         <Layout>
             <Head title="Mission" />
