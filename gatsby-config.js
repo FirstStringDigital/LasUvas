@@ -51,6 +51,8 @@ module.exports = {
           "**/taxonomies",
           "**/users",
           "**/Home",
+          "**/mission",
+          "**/tasting",
         ],
         excludedRoutes: [],
         normalizer: function({ entities}) {
