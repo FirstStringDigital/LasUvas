@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import MissionStyle from'./mission.module.scss'
@@ -14,13 +14,13 @@ const MissionPage = ({data}) => {
             <div className="row">
                 <Col lg={6} md={12} className={MissionStyle.mainSection}>
                     <h1 className={MissionStyle.mainTitleBold}>Our Mission</h1>
-                    <h1 className={MissionStyle.mainSectionTitle}>Mexican Wines</h1>
-                    <p className={MissionStyle.mainText}>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
+                    <h1 className={MissionStyle.mainSectionTitle}>{data.wordpressWpMission.acf.subtitle}</h1>
+                    <p className={MissionStyle.mainText}>{data.wordpressWpMission.acf.subcontent}</p>
                     <div className={MissionStyle.mobileText}>
-                        <h1 className="text-center">Valle De Guadalupe</h1>
-                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
-                        <h1 className="text-center">How Does It Compare?</h1>
-                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
+                        <h1 className="text-center">{data.wordpressWpMission.acf.subtitle2}</h1>
+                        <p>{data.wordpressWpMission.acf.subcontent2}</p>
+                        <h1 className="text-center">{data.wordpressWpMission.acf.subtitle3}}</h1>
+                        <p>{data.wordpressWpMission.acf.subcontent3}</p>
                     </div>
                     <AniLink swipe direction="left" entryOffset={100} to="/tastings" className={MissionStyle.btn}>DISCOVER OUR TASTINGS</AniLink>
                     <img src={MainBkgd} alt="Glasses of Wine" className={MissionStyle.mainBkgd} />
@@ -29,14 +29,14 @@ const MissionPage = ({data}) => {
                     <div className="row">
                         <Col md={4} className={MissionStyle.rightTopImg}></Col>
                         <Col md={8} className={MissionStyle.rightTopText}>
-                            <h1 className="text-center">Valle De Guadalupe</h1>
-                            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
+                            <h1 className="text-center">{data.wordpressWpMission.acf.subtitle2}</h1>
+                            <p>{data.wordpressWpMission.acf.subcontent2}</p>
                         </Col>
                     </div>
                     <div className={MissionStyle.rightBottomRow}>
                         <Col md={12} className={MissionStyle.rightBottomSection}>
-                            <h1 className="text-center">How Does It Compare?</h1>
-                            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
+                            <h1 className="text-center">{data.wordpressWpMission.acf.subtitle3}</h1>
+                            <p>{data.wordpressWpMission.acf.subcontent3}</p>
                             <AniLink swipe direction="up" entryOffset={100} to="/tastings" className={MissionStyle.btn}>DISCOVER OUR TASTINGS</AniLink>
                         </Col>
                     </div>
@@ -47,3 +47,21 @@ const MissionPage = ({data}) => {
 }
 
 export default MissionPage
+
+export const query = graphql`
+query MissionPage {
+    wordpressWpMission {
+        content
+        acf {
+            subtitle
+            subcontent
+            subtitle2
+            subcontent2
+            subtitle3
+            subcontent3
+        }
+    }
+}
+`
+
+
