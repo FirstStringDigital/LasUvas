@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Head from '../components/head'
 import TastingsStyle from'./tastings.module.scss'
@@ -8,43 +9,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
 import MainBkgd from '../images/main-background.png'
 
-const WithAppiPage = () => {
+const WithAppiPage = ({data}) => {
     return (
         <Layout>
             <Head title="Tastings With Appetizers" />
             <div className="row">
                 <Col lg={6} md={12} className={TastingsStyle.mainSection}>
                     <h1 className={TastingsStyle.mainTitleBold}>Discover Our Tastings</h1>
-                    <h1 className={TastingsStyle.mainSectionTitle}>Tastings with Appetizers</h1>
-                    <p className={TastingsStyle.mainText}>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
-                    <p className={TastingsStyle.price}>$40/person (minimum 4 People)</p>
+                    <h1 className={TastingsStyle.mainSectionTitle}>{data.wordpressWpTasting.acf.subtitle2}</h1>
+                    <p className={TastingsStyle.mainText}>{data.wordpressWpTasting.acf.subcontent2}</p>
+                    <p className={TastingsStyle.price}>{data.wordpressWpTasting.acf.price2}</p>
                     <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
                     <AniLink swipe direction="right" entryOffset={100} to="/tastings"><FontAwesomeIcon icon={faArrowAltCircleLeft} className={ TastingsStyle.arrowLeftIcon} /></AniLink>
                     <AniLink swipe direction="left" entryOffset={100} to="/chefs-dinner"><FontAwesomeIcon icon={faArrowAltCircleRight} className={ TastingsStyle.arrowRightIcon} /></AniLink>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TastingsStyle.mainBkgd} />
                 </Col>
-                {/*<Col lg={6} md={0} className={TastingsStyle.rightSection}>
-                    <div className="row">
-                        <Col md={4} className={TastingsStyle.rightTopImg}></Col>
-                        <Col md={8} className={TastingsStyle.rightTopText}>
-                            <h1 className="text-center">Basic Tasting</h1>
-                            <p className={TastingsStyle.rightTopDescription}>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
-                            <p className={TastingsStyle.price}>$20/person (minimum 4 People)</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
-                        </Col>
-                    </div>
-                    <div className={TastingsStyle.rightBottomRow}>
-                        <Col md={12} className={TastingsStyle.rightBottomSection}>
-                            <h1 className="text-center">Chef's Dinner</h1>
-                            <p className={TastingsStyle.rightBottomDescription}>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
-                            <p className={TastingsStyle.price}>$100/person (minimum 4 People)</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
-                        </Col>
-                    </div>
-                </Col>*/}
             </div>
         </Layout>
     )
 }
 
 export default WithAppiPage
+
+
+export const query = graphql`
+query TastingAppiPage {
+    wordpressWpTasting {
+        acf {
+            subtitle2
+            subcontent2
+            price2
+        }
+    }
+}
+`
