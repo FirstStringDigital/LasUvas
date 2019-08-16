@@ -23,7 +23,7 @@ const WithAppiPage = () => {
                     <AniLink swipe direction="left" entryOffset={100} to="/chefs-dinner"><FontAwesomeIcon icon={faArrowAltCircleRight} className={ TastingsStyle.arrowRightIcon} /></AniLink>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TastingsStyle.mainBkgd} />
                 </Col>
-                <Col lg={6} md={0} className={TastingsStyle.rightSection}>
+                {/*<Col lg={6} md={0} className={TastingsStyle.rightSection}>
                     <div className="row">
                         <Col md={4} className={TastingsStyle.rightTopImg}></Col>
                         <Col md={8} className={TastingsStyle.rightTopText}>
@@ -41,7 +41,7 @@ const WithAppiPage = () => {
                             <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
                         </Col>
                     </div>
-                </Col>
+                </Col>*/}
             </div>
         </Layout>
     )
