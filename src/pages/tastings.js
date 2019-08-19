@@ -8,6 +8,7 @@ import { Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
 import MainBkgd from '../images/main-background.png'
+import Calendly from '../components/calendly'
 
 const TastingsPage = ({data}) => {
     return (
@@ -19,7 +20,13 @@ const TastingsPage = ({data}) => {
                     <h1 className={TastingsStyle.mainSectionTitle}>{data.wordpressWpTasting.acf.subtitle}</h1>
                     <p className={TastingsStyle.mainText}>{data.wordpressWpTasting.acf.subcontent}</p>
                     <p className={TastingsStyle.price}>{data.wordpressWpTasting.acf.price1}</p>
-                    <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
+                    <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>Schedule Now</AniLink>
+                    
+                    <Calendly>
+                    <button onclick={()=>{Calendly.showPopupWidget('https://calendly.com/elevateloscabos')}}>Book Me!</button>
+                    </Calendly>
+  
+                    
                     <AniLink swipe direction="left" entryOffset={100} to="/tastings-with-appetizers"><FontAwesomeIcon icon={faArrowAltCircleRight} className={ TastingsStyle.arrowRightIcon} /></AniLink>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TastingsStyle.mainBkgd} />
                 </Col>
