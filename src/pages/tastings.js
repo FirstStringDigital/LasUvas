@@ -20,13 +20,11 @@ const TastingsPage = ({data}) => {
                     <h1 className={TastingsStyle.mainSectionTitle}>{data.wordpressWpTasting.acf.subtitle}</h1>
                     <p className={TastingsStyle.mainText}>{data.wordpressWpTasting.acf.subcontent}</p>
                     <p className={TastingsStyle.price}>{data.wordpressWpTasting.acf.price1}</p>
-                    <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>Schedule Now</AniLink>
-                    
-                    <Calendly>
-                    <button onclick={()=>{Calendly.showPopupWidget('https://calendly.com/elevateloscabos')}}>Book Me!</button>
-                    </Calendly>
-  
-                    
+                    {/*Calendly*/}
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                    <a className={TastingsStyle.btn} href="https://calendly.com/elevateloscabos/las-uvas-wine-tasting"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elevateloscabos/las-uvas-wine-tasting'});return false;">Book Now</a>
+                    {/*Calendly*/}
                     <AniLink swipe direction="left" entryOffset={100} to="/tastings-with-appetizers"><FontAwesomeIcon icon={faArrowAltCircleRight} className={ TastingsStyle.arrowRightIcon} /></AniLink>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TastingsStyle.mainBkgd} />
                 </Col>
@@ -37,7 +35,12 @@ const TastingsPage = ({data}) => {
                             <h1 className="text-center">{data.wordpressWpTasting.acf.subtitle2}</h1>
                             <p className={TastingsStyle.rightTopDescription}>{data.wordpressWpTasting.acf.subcontent2}</p>
                             <p className={TastingsStyle.price}>{data.wordpressWpTasting.acf.price2}</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
+                            {/*<AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>*/}
+                            {/*Calendly*/}
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                            <a className={TastingsStyle.btn} href="https://calendly.com/elevateloscabos/las-uvas-wine-tasting"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elevateloscabos/las-uvas-wine-tasting'});return false;">Book Now</a>
+                            {/*Calendly*/}
                         </Col>
                     </div>
                     <div className={TastingsStyle.rightBottomRow}>
@@ -45,7 +48,11 @@ const TastingsPage = ({data}) => {
                             <h1 className="text-center">{data.wordpressWpTasting.acf.subtitle3}</h1>
                             <p className={TastingsStyle.rightBottomDescription}>{data.wordpressWpTasting.acf.subcontent3}</p>
                             <p className={TastingsStyle.price}>{data.wordpressWpTasting.acf.price3}</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
+                            {/*Calendly*/}
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                            <a className={TastingsStyle.btn} href="https://calendly.com/elevateloscabos/las-uvas-wine-tasting"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elevateloscabos/las-uvas-wine-tasting'});return false;">Book Now</a>
+                            {/*Calendly*/}
                         </Col>
                     </div>
                 </Col>

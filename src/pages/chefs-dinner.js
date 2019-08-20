@@ -19,7 +19,12 @@ const ChefsDinnerPage = ({data}) => {
                     <h1 className={TastingsStyle.mainSectionTitle}>{data.wordpressWpTasting.acf.subtitle3}</h1>
                     <p className={TastingsStyle.mainText}>{data.wordpressWpTasting.acf.subcontent3}</p>
                     <p className={TastingsStyle.price}>{data.wordpressWpTasting.acf.price3}</p>
-                    <AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>
+                    {/*<AniLink swipe direction="up" entryOffset={100} to="/" className={TastingsStyle.btn}>BOOK NOW</AniLink>*/}
+                    {/*Calendly*/}
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                    <a className={TastingsStyle.btn} href="https://calendly.com/elevateloscabos/las-uvas-wine-tasting"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elevateloscabos/las-uvas-wine-tasting'});return false;">Book Now</a>
+                    {/*Calendly*/}
                     <AniLink swipe direction="right" entryOffset={100} to="/tastings-with-appetizers"><FontAwesomeIcon icon={faArrowAltCircleLeft} className={TastingsStyle.arrowLeftIcon} /></AniLink>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TastingsStyle.mainBkgd} />
                 </Col>

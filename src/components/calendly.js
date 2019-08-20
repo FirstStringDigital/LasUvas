@@ -1,32 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
+import {Helmet} from 'react-helmet'
 
-
-class Calendly extends Component {
-    componentDidMount () {
-        const head = document.querySelector ('head');
-        const script = document.createElement ('script');
-        const link = document.createElement('link');
-        script.setAttribute('src', 'https://calendly.com/assets/external/widget.js');
-        link.setAttribute('href', 'https://calendly.com/assets/external/widget.css');
-        head.appendChild (script, link);
-    }
-
-    componentWillUnmount () {
-
-    }
-
+class Calendly extends React.Component {
     render () {
+    
         return (
-            <div>
-                <div id="tasting scheduler">
-                    <div 
-                    className = 'calendly-popup-widget'
-                    data-url = 'https://calendly.com/elevateloscabos'
-                    />
-                </div>
-            </div>
-        )
+                <div className="tasting-scheduler">
+                    <Helmet>
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                    
+                    </Helmet>
+                    </div>
+        );
     }
-}
+};
 
 export default Calendly
