@@ -8,7 +8,6 @@ import { Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
 import MainBkgd from '../images/main-background.png'
-import Calendly from '../components/calendly'
 
 const TastingsPage = ({data}) => {
     return (
