@@ -9,6 +9,7 @@ module.exports = {
     title: `Las Uvas`,
     description: `Specializing In Mexican Wine Tastings`,
     author: `@gatsbyjs`,
+    siteUrl: 'http://lasuvasmexico.com'
   },
   plugins: [
     `gatsby-plugin-sass`,
