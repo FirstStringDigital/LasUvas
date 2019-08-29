@@ -36,6 +36,10 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         acfOptionPageIds: [],
+        auth: {
+          htaccess_user: process.env.HTACCESS_USER,
+          htaccess_pass: process.env.HTACCESS_PASSWORD,
+        },
         verboseOutput: false,
         perPage: 100,
         searchAndReplaceContentUrls: {
