@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "localhost:8888/lasuvas_cms",
+        baseUrl: "lasuvasmexico.com", //"localhost:8888/lasuvas_cms",  
         protocol: "http",
         hostingWPCOM: false,
         useACF: true,
@@ -40,7 +40,7 @@ module.exports = {
         perPage: 100,
         searchAndReplaceContentUrls: {
           sourceUrl: "http://www.lasuvasmexico.com",
-          replacementUrl: "http://localhost:8888/lasuvas_cms/",
+          replacementUrl: "http://www.lasuvasmexico.com",
         },
         concurrentRequests: 10,
         includedRoutes: [
