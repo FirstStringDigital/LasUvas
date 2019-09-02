@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons"
 import MainBkgd from "../images/main-background.png"
 
-const FaqsPage = ({ data }) => {
+const FaqsPage = () => {
   return (
     <Layout>
       <Head title="FAQ's" />
