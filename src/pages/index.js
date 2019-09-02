@@ -28,7 +28,7 @@ const IndexPage = ({data}) => {
                         <Col md={8} className={IndexStyle.rightTopText}>
                             <h1 className="text-center">Our Tastings</h1>
                             <p>{data.wordpressWpHome.acf.subcontent}</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/tastings" className={IndexStyle.btn}>DISCOVER OUR TASTIN</AniLink>
+                            <AniLink swipe direction="up" entryOffset={100} to="/tastings" className={IndexStyle.btn}>DISCOVER OUR TASTI</AniLink>
                         </Col>
                     </div>
                     <div className={IndexStyle.rightBottomRow}>
