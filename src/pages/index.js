@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Head from '../components/head'
+import CarouselSlider from '../components/carousel'
 import IndexStyle from'./index.module.scss'
 import { Col } from 'react-bootstrap'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -16,10 +17,11 @@ const IndexPage = ({data}) => {
                 <Col lg={6} md={12} className={IndexStyle.mainSection}>
                     <img src={MainLogo} alt="Las Uvas Logo" className={IndexStyle.mainLogo} />
                     <p className={IndexStyle.mainText}>{data.wordpressWpHome.acf.content}</p>
-                    <div className={IndexStyle.mobileBtn}>
-                        <AniLink swipe direction="right" entryOffset={100} to="/mission" className={IndexStyle.btn}>{data.wordpressWpHome.acf.subtitle2}</AniLink>
-                        <AniLink swipe direction="left" entryOffset={100} to="/tastings" className={IndexStyle.btn}>{data.wordpressWpHome.acf.subtitle}</AniLink>
+                    {/* START Carousel */}
+                    <div>
+                    <CarouselSlider />
                     </div>
+                    {/* END Carousel */}
                     <img src={MainBkgd} alt="Glasses of Wine" className={IndexStyle.mainBkgd} />
                 </Col>
                 <Col lg={6} md={0} className={IndexStyle.rightSection}>

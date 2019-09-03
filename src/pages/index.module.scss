@@ -114,12 +114,6 @@
     }
 }
 
-@media (min-width: 992px) {
-    .mobile-btn {
-        display: none;
-    }
-}
-
 @media (max-width: 991px) {
     .main-section {
         height: 93.5vh;
@@ -128,11 +122,6 @@
     .main-text {
         font-size: 25px;
         padding: 20px 50px;
-    }
-
-    .mobile-btn {
-        display: flex;
-        margin: 0 3%;
     }
 
     .main-bkgd {
@@ -154,11 +143,6 @@
     .main-text {
         font-size: 20px;
         padding: 20px 10px;
-    }
-
-    .mobile-btn {
-        display: block;
-        margin-bottom: 0;
     }
 
     .btn {
