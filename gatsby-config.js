@@ -59,6 +59,7 @@ module.exports = {
           "**/mission",
           "**/tasting",
           "**/faq",
+          "**/testimonials",
         ],
         excludedRoutes: [],
         normalizer: function({ entities}) {
