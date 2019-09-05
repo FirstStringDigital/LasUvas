@@ -17,7 +17,7 @@ const FaqsPage = () => {
           <h1 className={FaqsStyle.mainTitleBold}>FAQ's</h1>
           <h1 className={FaqsStyle.mainSectionTitle}>The Not So Fine Print</h1>
           <div className={FaqsStyle.accordianSection}>
-            <Accordion defaultActiveKey="0">
+            <Accordion>
               <Card className={FaqsStyle.card}>
                 <Card.Header className={FaqsStyle.cardHeader}>
                   <Accordion.Toggle className={FaqsStyle.btnToggle} as={Button} variant="link" eventKey="0">
