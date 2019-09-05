@@ -9,7 +9,7 @@ module.exports = {
     title: `Las Uvas`,
     description: `Specializing In Mexican Wine Tastings`,
     author: `@gatsbyjs`,
-    siteUrl: 'http://lasuvasmexico.com'
+    //siteUrl: 'http://lasuvasmexico.com'
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "lasuvasmexico.com", //"localhost:8888/lasuvas_cms", 
+        baseUrl: "localhost:8888/lasuvas_cms", //"lasuvasmexico.com",
         protocol: "http",
         hostingWPCOM: false,
         useACF: true,
@@ -43,8 +43,8 @@ module.exports = {
         verboseOutput: false,
         perPage: 100,
         searchAndReplaceContentUrls: {
-          sourceUrl: "lasuvasmexico.com", //"localhost:8888/lasuvas_cms",
-          replacementUrl: "lasuvasmexico.com", //"localhost:8888/lasuvas_cms",
+          sourceUrl: "localhost:8888/lasuvas_cms", //"lasuvasmexico.com",
+          replacementUrl: "localhost:8888/lasuvas_cms", //"lasuvasmexico.com",
         },
         concurrentRequests: 10,
         includedRoutes: [
