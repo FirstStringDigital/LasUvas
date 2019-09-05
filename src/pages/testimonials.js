@@ -25,24 +25,6 @@ const TestimonialsPage = ({data}) => {
                         </p>
                         ))}
                         <hr className={TestimonialsStyle.hr} />
-
-                        {/*<p className={TestimonialsStyle.testimonialText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer quis nunc tristique, eleifend leo vitae, lobortis
-                      libero. In at quam nunc. Duis sagittis luctus ante, in
-                      aliquam lorem pharetra in.
-                        </p>
-                        <p className={TestimonialsStyle.testimonialName}>John Smith</p>
-
-                        <hr className={TestimonialsStyle.hr} />
-
-                        <p className={TestimonialsStyle.testimonialText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer quis nunc tristique, eleifend leo vitae, lobortis
-                      libero. In at quam nunc. Duis sagittis luctus ante, in
-                      aliquam lorem pharetra in.
-                        </p>
-                        <p className={TestimonialsStyle.testimonialName}>John Smith</p> */}
                     </div>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TestimonialsStyle.mainBkgd} />
                 </Col>
