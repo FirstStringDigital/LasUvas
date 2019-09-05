@@ -25,16 +25,30 @@
     position: relative;
 }
 
-.main-logo {
-    width: 250px;
-    display: block;
-    padding-top: 50px;
-    margin: 0 auto;
+.main-title-bold {
+    color: #900561;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 50px 0;
 }
 
-.main-text {
+.main-section-title {
     text-align: center;
+}
+
+.testimonial-section {
     padding: 20px 10px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+}
+
+.hr {
+    width: 100%;
 }
 
 .main-bkgd {
@@ -135,17 +149,14 @@
 }
 
 @media (max-width: 575px) {
-    .main-logo {
-        width: 200px;
-        padding-top: 20px;
-    }
-
     .main-text {
         font-size: 20px;
         padding: 20px 10px;
     }
+}
 
-    .btn {
-        margin-bottom: 10px;
+@media (max-width:387px) {
+    .main-title-bold {
+        font-size: 40px;
     }
 }

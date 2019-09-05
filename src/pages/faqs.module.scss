@@ -25,16 +25,47 @@
     position: relative;
 }
 
-.main-logo {
-    width: 250px;
+.main-title-bold {
+    color: #900561;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.main-section-title {
+    text-align: center;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 0;
+}
+
+.btn-toggle {
+    color: #900561;
     display: block;
-    padding-top: 50px;
     margin: 0 auto;
 }
 
-.main-text {
-    text-align: center;
-    padding: 20px 10px;
+.btn-toggle:hover, 
+.btn-toggle:active, 
+.btn-toggle:focus {
+    color: #900561;
+    text-decoration: none;
+}
+
+.card-body {
+    height: 200px;
+    overflow: auto;
 }
 
 .main-bkgd {
@@ -43,10 +74,10 @@
     left: 11%;
     width: 30%;
     opacity: .30;
-    z-index: -3;
+    z-index: -1;
 }
 
-// Home Page Right Section
+// Page Right Section
 .right-section {
     padding: 0;
 }
@@ -69,10 +100,6 @@
 .right-top-text {
     text-align: center;
     padding: 0 30px;
-
-    p {
-        padding: 20px 0;
-    }
 }
 
 .right-bottom-row {
@@ -95,22 +122,28 @@
     width: 100%;
     height: 50vh;
     padding: 50px 20px;
+}
 
-    p {
-        text-align: center;
-        padding: 20px 0;
-    }
+.right-bottom-description {
+    text-align: center;    
 }
 
 @media (min-width: 1054px) and (max-width: 1184px) {
-    .right-top-img{
+    .right-top-img {
         margin-top: -9%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1053px) {
-    .right-top-img{
+    .right-top-img {
         margin-top: -10%;
+    }
+}
+
+@media (min-width: 992px) {
+    .arrow-left-icon, 
+    .arrow-right-icon {
+        display: none;
     }
 }
 
@@ -119,9 +152,20 @@
         height: 93.5vh;
     }
 
-    .main-text {
-        font-size: 25px;
-        padding: 20px 50px;
+    .arrow-left-icon {
+        color: #900561;
+        font-size:40px;
+        position: absolute;
+        left: 1%;
+        bottom: 50%;
+    }
+
+    .arrow-right-icon {
+        color: #900561;
+        font-size:40px;
+        position: absolute;
+        right: 1%;
+        bottom: 50%;
     }
 
     .main-bkgd {
@@ -134,18 +178,29 @@
     }
 }
 
-@media (max-width: 575px) {
-    .main-logo {
-        width: 200px;
-        padding-top: 20px;
+@media (max-width: 575px) {.arrow-left-icon, 
+    .arrow-right-icon {
+        font-size: 30px;
     }
 
-    .main-text {
-        font-size: 20px;
-        padding: 20px 10px;
+    .arrow-left-icon {
+        position: sticky;
+        bottom: 46%;
     }
 
-    .btn {
-        margin-bottom: 10px;
+    .arrow-right-icon {
+        position: sticky;
+        bottom: 46%;
+        left: 100%;
+    }
+
+    .main-bkgd {
+        position: sticky;
+    }
+}
+
+@media (max-width:387px) {
+    .main-title-bold {
+        font-size: 40px;
     }
 }
