@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Head from '../components/head'
 import TestimonialsStyle from'./testimonials.module.scss'
@@ -6,7 +7,7 @@ import { Col } from 'react-bootstrap'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import MainBkgd from '../images/main-background.png'
 
-const TestimonialsPage = () => {
+const TestimonialsPage = ({data}) => {
     return (
         <Layout>
             <Head title="Testimonials" />
@@ -14,34 +15,16 @@ const TestimonialsPage = () => {
                 <Col lg={6} md={12} className={TestimonialsStyle.mainSection}>
                     <h1 className={TestimonialsStyle.mainTitleBold}>Testimonials</h1>
                     <h1 className={TestimonialsStyle.mainSectionTitle}>Getting Some Props</h1>
+                    {/* Testimonial Text */}
                     <div className={TestimonialsStyle.testimonialSection}>
-                        <p className={TestimonialsStyle.testimonialText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer quis nunc tristique, eleifend leo vitae, lobortis
-                      libero. In at quam nunc. Duis sagittis luctus ante, in
-                      aliquam lorem pharetra in.
+                        {data.allWordpressWpTestimonials.edges.map(document => (
+                            <p className={TestimonialsStyle.testimonialText} key ={document.node.id}>
+                            <p>{document.node.acf.testimonial}</p>
+                       {/*Testimonial Name of Person and location */}
+                        <p className={TestimonialsStyle.testimonialName}>{document.node.acf.name} - {document.node.acf.location}</p>
                         </p>
-                        <p className={TestimonialsStyle.testimonialName}>John Smith</p>
-
+                        ))}
                         <hr className={TestimonialsStyle.hr} />
-
-                        <p className={TestimonialsStyle.testimonialText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer quis nunc tristique, eleifend leo vitae, lobortis
-                      libero. In at quam nunc. Duis sagittis luctus ante, in
-                      aliquam lorem pharetra in.
-                        </p>
-                        <p className={TestimonialsStyle.testimonialName}>John Smith</p>
-
-                        <hr className={TestimonialsStyle.hr} />
-
-                        <p className={TestimonialsStyle.testimonialText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer quis nunc tristique, eleifend leo vitae, lobortis
-                      libero. In at quam nunc. Duis sagittis luctus ante, in
-                      aliquam lorem pharetra in.
-                        </p>
-                        <p className={TestimonialsStyle.testimonialName}>John Smith</p>
                     </div>
                     <img src={MainBkgd} alt="Glasses of Wine" className={TestimonialsStyle.mainBkgd} />
                 </Col>
@@ -68,3 +51,19 @@ const TestimonialsPage = () => {
 }
 
 export default TestimonialsPage
+
+export const pageQuery = graphql`
+    query TestimonialQuery {
+        allWordpressWpTestimonials {
+            edges {
+                node {
+                    acf {
+                        testimonial
+                        name
+                        location
+                    }
+                }
+            }
+        }
+    }
+    `
