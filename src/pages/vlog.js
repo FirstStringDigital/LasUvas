@@ -5,7 +5,7 @@ import Head from '../components/head'
 import Vlog from "../components/vlog-component"
 import OurTastings from "../components/our-tastings"
 import OurMission from "../components/our-mission"
-import VlogStyle from'../styles/vlog.module.scss'
+import "../styles/global.css"
 import { Col } from 'react-bootstrap'
 import MainBkgd from '../images/main-background.png'
 
@@ -14,23 +14,23 @@ const VlogPage = ({data}) => {
         <Layout>
             <Head title="Friday Night With The Kims" />
             <div className="row">
-                <Col lg={6} md={12} className={VlogStyle.mainSection}>
-                    <h1 className={VlogStyle.mainTitleBold}>Vlog</h1>
-                    <h1 className={VlogStyle.mainSectionTitle}>Friday Night With The Kims</h1>
+                <Col lg={6} md={12} className="main-section">
+                    <h1 className="main-title-bold">Vlog</h1>
+                    <h1 className="main-section-title">Friday Night With The Kims</h1>
                     {/*Video Content here */}
                     <Vlog />
                     {/* End Video Content */}
-                    <img src={MainBkgd} alt="Glasses of Wine" className={VlogStyle.mainBkgd} />
+                    <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
-                <Col lg={6} md={0} className={VlogStyle.rightSection}>
+                <Col lg={6} md={0} className="right-section">
                     <div className="row">
-                        <Col md={4} className={VlogStyle.rightTopImg}></Col>
-                        <Col md={8} className={VlogStyle.rightTopText}>
+                        <Col md={4} className="right-top-img"></Col>
+                        <Col md={8} className="right-top-text">
                             <OurTastings />
                         </Col>
                     </div>
-                    <div className={VlogStyle.rightBottomRow}>
-                        <Col md={12} className={VlogStyle.rightBottomSection}>
+                    <div className="right-bottom-row">
+                        <Col md={12} className="right-bottom-section">
                             <OurMission />
                         </Col>
                     </div>

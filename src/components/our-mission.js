@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import IndexStyle from "../styles/index.module.scss"
+import "../styles/global.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 

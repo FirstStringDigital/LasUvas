@@ -5,7 +5,7 @@ import Head from '../components/head'
 import TastingSlider from "../components/tasting-slider"
 import MidTasting from "../components/mid-tasting"
 import ChefsDinner from "../components/chefs-dinner"
-import TastingsStyle from'../styles/tastings.module.scss'
+import "../styles/global.css"
 import MainBkgd from '../images/main-background.png'
 
 const TastingsPage = () => {
@@ -13,20 +13,20 @@ const TastingsPage = () => {
         <Layout>
             <Head title="Tastings" />
             <div className="row">
-                <Col lg={6} md={12} className={TastingsStyle.mainSection}>
-                <h1 className={TastingsStyle.mainTitleBold}>Discover Our Tastings</h1>
+                <Col lg={6} md={12} className="main-section">
+                <h1 className="main-title-bold">Discover Our Tastings</h1>
                     <TastingSlider />
-                    <img src={MainBkgd} alt="Glasses of Wine" className={TastingsStyle.mainBkgd} />
+                    <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
-                <Col lg={6} md={0} className={TastingsStyle.rightSection}>
+                <Col lg={6} md={0} className="right-section">
                     <div className="row">
-                        <Col md={4} className={TastingsStyle.rightTopImg}></Col>
-                        <Col md={8} className={TastingsStyle.rightTopText}>
+                        <Col md={4} className="right-top-img"></Col>
+                        <Col md={8} className="right-top-text">
                             <MidTasting />
                         </Col>
                     </div>
-                    <div className={TastingsStyle.rightBottomRow}>
-                        <Col md={12} className={TastingsStyle.rightBottomSection}>
+                    <div className="right-bottom-row">
+                        <Col md={12} className="right-bottom-section">
                             <ChefsDinner />
                         </Col>
                     </div>

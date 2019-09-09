@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import IndexStyle from "../styles/index.module.scss"
+import "../styles/global.css"
 import MainLogo from '../images/las_uvas_logo.png'
 
 
@@ -16,8 +16,8 @@ export default () => (
         `}
         render={data => (
             <div>
-            <img src={MainLogo} alt="Las Uvas Logo" className={IndexStyle.mainLogo} />
-            <p className={IndexStyle.mainText}>{data.wordpressWpHome.acf.content}</p>
+            <img src={MainLogo} alt="Las Uvas Logo" className="main-logo" />
+            <p className="main-text">{data.wordpressWpHome.acf.content}</p>
         </div>
         )}
         />

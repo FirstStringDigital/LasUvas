@@ -5,7 +5,7 @@ import Head from '../components/head'
 import MissionSlider from "../components/mission-slider"
 import MissionRightTop from "../components/mission-right-top"
 import MissionRightBottom from "../components/mission-right-bottom"
-import MissionStyle from'../styles/mission.module.scss'
+import "../styles/global.css"
 import MainBkgd from '../images/main-background.png'
 
 
@@ -14,19 +14,19 @@ const MissionPage = () => {
         <Layout>
             <Head title="Mission" />
             <div className="row">
-                <Col lg={6} md={12} className={MissionStyle.mainSection}>
+                <Col lg={6} md={12} className="main-section">
                     <MissionSlider />
-                    <img src={MainBkgd} alt="Glasses of Wine" className={MissionStyle.mainBkgd} />
+                    <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
-                <Col lg={6} md={0} className={MissionStyle.rightSection}>
+                <Col lg={6} md={0} className="right-section">
                     <div className="row">
-                        <Col md={4} className={MissionStyle.rightTopImg}></Col>
-                        <Col md={8} className={MissionStyle.rightTopText}>
+                        <Col md={4} className="right-top-img"></Col>
+                        <Col md={8} className="right-top-text">
                             <MissionRightTop />
                         </Col>
                     </div>
-                    <div className={MissionStyle.rightBottomRow}>
-                        <Col md={12} className={MissionStyle.rightBottomSection}>
+                    <div className="right-bottom-row">
+                        <Col md={12} className="right-bottom-section">
                             <MissionRightBottom />
                         </Col>
                     </div>

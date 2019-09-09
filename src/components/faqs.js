@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Accordion, Card, Button } from "react-bootstrap"
+import "../styles/global.css"
 import FaqsStyle from "../styles/faqs.module.scss"
 
 
@@ -21,8 +22,8 @@ export default () => (
         `}
         render={data => (
             <div>
-            <h1 className={FaqsStyle.mainTitleBold} id="faqs">FAQ's</h1>
-          <h1 className={FaqsStyle.mainSectionTitle}>The Not So Fine Print</h1>
+            <h1 className="main-title-bold">FAQ's</h1>
+          <h1 className="main-section-title">The Not So Fine Print</h1>
           <div className={FaqsStyle.accordianSection}>{data.allWordpressWpFaq.edges.map(document => 
             (
               <Accordion>
