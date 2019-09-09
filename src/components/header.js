@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/styles.css'
-import './header.css'
+import '../styles/bootstrap.css'
+import '../styles/global.css'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'

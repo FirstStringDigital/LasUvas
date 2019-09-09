@@ -4,10 +4,6 @@
     display: block;
 }
 
-.slick-dots li.slick-active button:before {
-    color: #900561 !important;
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
     .carousel-img {
         width: 60%;

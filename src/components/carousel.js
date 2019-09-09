@@ -3,14 +3,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./carousel.css"
+import HomeCarouselStyle from "../styles/home-carousel.module.scss"
+import "../styles/global.css"
 import Tastings from "../images/tastings.png"
 import Mission from "../images/mission.png"
 import Vlog from "../images/vlog.png"
 import Testimonial from "../images/testimonial.png"
-import Faq from "../images/faq.png"
 
-export default class CarouselSlider extends Component {
+export default class HomelSlider extends Component {
   render() {
     
     return (
@@ -22,20 +22,17 @@ export default class CarouselSlider extends Component {
         slidesToShow={3}
         swipeToSlide={true}
         >
-          <AniLink swipe direction="up" entryOffset={100} to="/tastings" className="carousel-item">
-            <img src={Tastings} alt="Wine Tasting" className="carousel-img" />
+          <AniLink swipe direction="up" entryOffset={100} to="/tastings" >
+            <img src={Tastings} alt="Wine Tasting" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
-          <AniLink swipe direction="up" entryOffset={100} to="/mission" className="carousel-item">
-          <img src={Mission} alt="About Us" className="carousel-img" />
+          <AniLink swipe direction="up" entryOffset={100} to="/mission" >
+          <img src={Mission} alt="Mission" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
-          <AniLink swipe direction="up" entryOffset={100} to="/vlog" className="carousel-item">
-          <img src={Vlog} alt="Vlog" className="carousel-img" />
+          <AniLink swipe direction="up" entryOffset={100} to="/vlog" >
+          <img src={Vlog} alt="Vlog" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
-          <AniLink swipe direction="up" entryOffset={100} to="/testimonials" className="carousel-item">
-          <img src={Testimonial} alt="Testimonial" className="carousel-img" />
-          </AniLink>
-          <AniLink swipe direction="up" entryOffset={100} to="/faqs" className="carousel-item">
-          <img src={Faq} alt="FAQ" className="carousel-img" />
+          <AniLink swipe direction="up" entryOffset={100} to="/testimonials" >
+          <img src={Testimonial} alt="Testimonial" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
         </Slider>
       </div>

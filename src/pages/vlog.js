@@ -2,44 +2,36 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Head from '../components/head'
-import VlogStyle from'./vlog.module.scss'
+import Vlog from "../components/vlog-component"
+import OurTastings from "../components/our-tastings"
+import OurMission from "../components/our-mission"
+import "../styles/global.css"
 import { Col } from 'react-bootstrap'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import MainBkgd from '../images/main-background.png'
-import Video from '../components/video'
 
 const VlogPage = ({data}) => {
     return (
         <Layout>
             <Head title="Friday Night With The Kims" />
             <div className="row">
-                <Col lg={6} md={12} className={VlogStyle.mainSection}>
-                    <h1 className={VlogStyle.mainTitleBold}>Vlog</h1>
-                    <h1 className={VlogStyle.mainSectionTitle}>Friday Night With The Kims</h1>
+                <Col lg={6} md={12} className="main-section">
+                    <h1 className="main-title-bold">Vlog</h1>
+                    <h1 className="main-section-title">Friday Night With The Kims</h1>
                     {/*Video Content here */}
-                    <div className={VlogStyle.videoSection}>{data.allWordpressPost.edges.map(document => (
-                        <li key={document.node.id}>
-                            <Video videoSrcURL={document.node.acf.youtubeurl} videoTitle="Featured Video"/>
-                        </li>
-                    ))}
-                        {/* End Video Content */}
-                    </div>
-                    <img src={MainBkgd} alt="Glasses of Wine" className={VlogStyle.mainBkgd} />
+                    <Vlog />
+                    {/* End Video Content */}
+                    <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
-                <Col lg={6} md={0} className={VlogStyle.rightSection}>
+                <Col lg={6} md={0} className="right-section">
                     <div className="row">
-                        <Col md={4} className={VlogStyle.rightTopImg}></Col>
-                        <Col md={8} className={VlogStyle.rightTopText}>
-                            <h1 className="text-center">Our Tastings</h1>
-                            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/tastings" className={VlogStyle.btn}>DISCOVER OUR TASTINGS</AniLink>
+                        <Col md={4} className="right-top-img"></Col>
+                        <Col md={8} className="right-top-text">
+                            <OurMission/>
                         </Col>
                     </div>
-                    <div className={VlogStyle.rightBottomRow}>
-                        <Col md={12} className={VlogStyle.rightBottomSection}>
-                            <h1 className="text-center">Our Mission</h1>
-                            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ut dolor a laoreet. Fusce imperdiet, dolor eu fermentum rhoncus, ligula nibh dapibus sem, in rutrum tortor turpis eget tortor. </p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/mission" className={VlogStyle.btn}>LEARN MORE</AniLink>
+                    <div className="right-bottom-row">
+                        <Col md={12} className="right-bottom-section">
+                            <OurTastings />
                         </Col>
                     </div>
                 </Col>

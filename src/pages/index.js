@@ -1,43 +1,36 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Col } from 'react-bootstrap'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import CarouselSlider from '../components/carousel'
-import IndexStyle from'./index.module.scss'
-import { Col } from 'react-bootstrap'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import MainLogo from '../images/las_uvas_logo.png'
+import HomeMain from "../components/index-main"
+import HomeSlider from '../components/carousel'
+import OurTastings from "../components/our-tastings"
+import OurMission from "../components/our-mission"
+import "../styles/global.css"
 import MainBkgd from '../images/main-background.png'
 
-const IndexPage = ({data}) => {
+const IndexPage = () => {
     return (
         <Layout>
             <Head title="Home" />
             <div className="row">
-                <Col lg={6} md={12} className={IndexStyle.mainSection}>
-                    <img src={MainLogo} alt="Las Uvas Logo" className={IndexStyle.mainLogo} />
-                    <p className={IndexStyle.mainText}>{data.wordpressWpHome.acf.content}</p>
-                    {/* START Carousel */}
+                <Col lg={6} md={12} className="main-section">
+                    <HomeMain />
                     <div>
-                    <CarouselSlider />
+                    <HomeSlider />
                     </div>
-                    {/* END Carousel */}
-                    <img src={MainBkgd} alt="Glasses of Wine" className={IndexStyle.mainBkgd} />
+                    <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
-                <Col lg={6} md={0} className={IndexStyle.rightSection}>
+                <Col lg={6} md={0} className="right-section">
                     <div className="row">
-                        <Col md={4} className={IndexStyle.rightTopImg}></Col>
-                        <Col md={8} className={IndexStyle.rightTopText}>
-                            <h1 className="text-center">Our Tastings</h1>
-                            <p>{data.wordpressWpHome.acf.subcontent}</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/tastings" className={IndexStyle.btn}>DISCOVER OUR TASTINGS</AniLink>
+                        <Col md={4} className="right-top-img"></Col>
+                        <Col md={8} className="right-top-text">
+                            <OurMission />
                         </Col>
                     </div>
-                    <div className={IndexStyle.rightBottomRow}>
-                        <Col md={12} className={IndexStyle.rightBottomSection}>
-                            <h1 className="text-center">Our Mission</h1>
-                            <p>{data.wordpressWpHome.acf.subcontent2}</p>
-                            <AniLink swipe direction="up" entryOffset={100} to="/mission" className={IndexStyle.btn}>LEARN MORE</AniLink>
+                    <div className="right-bottom-row">
+                        <Col md={12} className="right-bottom-section">
+                            <OurTastings />
                         </Col>
                     </div>
                 </Col>
@@ -47,19 +40,3 @@ const IndexPage = ({data}) => {
 }
 
 export default IndexPage
-
-
-export const query = graphql`
-query HomePage {
-    wordpressWpHome {
-        content
-        acf {
-            content
-            subtitle
-            subcontent
-            subtitle2
-            subcontent2
-        }
-    }
-}
-`

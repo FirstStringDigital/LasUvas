@@ -1,3 +1,47 @@
+/***
+1) Header Nav
+2) Page Framework
+
+Plugins:
+1) React-Slick Carousel
+***/
+
+/* Header Nav */
+.nav-logo {
+    width: 10%;
+    padding-top: 5px;
+}
+
+.icon-wrapper {
+    display: inline-block;
+}
+
+.nav-icon {
+    color: #900561;
+    font-size: 25px;
+    margin: 10px 5px;
+}
+
+@media (max-width: 991px) {
+    .nav-logo {
+        width: 12%;
+    }
+    .nav-icon-col {
+        text-align: right;
+    }
+
+    .nav-icon {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-logo {
+        width: 23%;
+    }
+}
+
+/* Page Framework */
 .btn {
     color: #900561;
     border: #900561 solid 1px;
@@ -20,7 +64,7 @@
     text-decoration: none;
 }
 
-// Page Main Section
+/* Page Main Section */
 .main-section {
     position: relative;
 }
@@ -44,11 +88,13 @@
 
 .main-section-title {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .main-text {
     text-align: center;
-    padding: 20px 10px 0 10px;
+    padding: 20px 10px;
+    margin-bottom: 0;
 }
 
 .price {
@@ -63,16 +109,16 @@
     left: 11%;
     width: 30%;
     opacity: .30;
-    z-index: -1;
+    z-index: -3;
 }
 
-// Page Right Section
+/* Home Page Right Section */
 .right-section {
     padding: 0;
 }
 
 .right-top-img {
-    background-image: url(../images/tastings-right-top-background.jpg);
+    background-image: url(../images/home-right-top-background.jpg);
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -88,15 +134,16 @@
 
 .right-top-text {
     text-align: center;
-    padding: 0;
-}
-
-.right-top-description {
     padding: 0 30px;
 }
 
+.right-top-text p {
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
 .right-bottom-row {
-    background-image: url(../images/tastings-right-bottom-background.jpg);
+    background-image: url(../images/home-right-bottom-background.jpg);
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -117,53 +164,32 @@
     padding: 50px 20px;
 }
 
+.right-bottom-section p {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
 @media (min-width: 1054px) and (max-width: 1184px) {
-    .right-top-img {
+    .right-top-img{
         margin-top: -9%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1053px) {
-    .right-top-img {
+    .right-top-img{
         margin-top: -10%;
     }
 }
 
-@media (min-width: 992px) {
-    .arrow-left-icon, 
-    .arrow-right-icon {
-        display: none;
-    }
-}
-
 @media (max-width: 991px) {
-    .desktop-btn {
-        display: none;
-    }
-
     .main-section {
         height: 93.5vh;
     }
 
-    .main-text{
+    .main-text {
         font-size: 25px;
-        padding: 20px 30px 0 30px;
-    }
-
-    .arrow-left-icon {
-        color: #900561;
-        font-size:40px;
-        position: absolute;
-        left: 1%;
-        bottom: 50%;
-    }
-
-    .arrow-right-icon {
-        color: #900561;
-        font-size:40px;
-        position: absolute;
-        right: 1%;
-        bottom: 50%;
+        padding: 20px 50px;
     }
 
     .main-bkgd {
@@ -184,35 +210,61 @@
 
     .main-text {
         font-size: 20px;
+        padding: 20px 10px;
     }
 
     .btn {
         margin-bottom: 10px;
-    }
-
-    .arrow-left-icon, 
-    .arrow-right-icon {
-        font-size: 30px;
-    }
-
-    .arrow-left-icon {
-        position: sticky;
-        bottom: 46%;
-    }
-
-    .arrow-right-icon {
-        position: sticky;
-        bottom: 46%;
-        left: 100%;
-    }
-
-    .main-bkgd {
-        position: sticky;
     }
 }
 
 @media (max-width:387px) {
     .main-title-bold {
         font-size: 40px;
+    }
+}
+
+
+/** PLUGINS **/
+
+/* React-Slick Carousel */
+.slick-prev {
+    left: -15px !important;
+    z-index: 100 !important;
+}
+
+.slick-prev:before {
+    color: #900561 !important;
+    font-size: 25px !important;
+}
+
+.slick-next {
+    right: -9px !important;
+}
+
+.slick-next:before {
+    color: #900561 !important;
+    font-size: 25px !important;
+}
+
+.slider .slick-prev,
+.slider .slick-next {
+    top: 80% !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #900561 !important;
+}
+
+@media (min-width: 992px) {
+    .slick-dots {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .slick-prev, 
+    .slick-next {
+        display: none !important;
     }
 }
