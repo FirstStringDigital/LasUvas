@@ -13,6 +13,8 @@ export default () => (
                     subcontent
                     subtitle2
                     subcontent2
+                    subtitle3
+                    subcontent3
                 }
             }
         }
@@ -23,6 +25,8 @@ export default () => (
                 <h1 className="main-section-title">{data.wordpressWpMission.acf.subtitle}</h1>
                 <p className="main-text">{data.wordpressWpMission.acf.subcontent}</p>
                 <div className={MissionStyle.mobileText}>
+                <h1 className="text-center">{data.wordpressWpMission.acf.subtitle3}</h1>
+                    <p>{data.wordpressWpMission.acf.subcontent3}</p>
                     <h1 className="text-center">{data.wordpressWpMission.acf.subtitle2}</h1>
                     <p>{data.wordpressWpMission.acf.subcontent2}</p>
                     <a href="mailto:hola@elevateloscabos.com" className="btn">CONTACT US</a>

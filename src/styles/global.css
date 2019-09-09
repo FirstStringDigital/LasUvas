@@ -247,6 +247,11 @@ Plugins:
     font-size: 25px !important;
 }
 
+.slider .slick-prev,
+.slider .slick-next {
+    top: 80% !important;
+}
+
 .slick-dots li.slick-active button:before {
     color: #900561 !important;
 }

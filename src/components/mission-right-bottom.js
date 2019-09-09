@@ -1,14 +1,24 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import "../styles/global.css"
 
 
-const MissionRightBottom = () => {
-    return(
-        <div>
-            <h1 className="text-center">Contact Us</h1>
-            <a href="mailto:hola@elevateloscabos.com" className="btn">CONTACT US</a>
-        </div>
-    )
-}
-
-export default MissionRightBottom
+export default () => (
+    <StaticQuery query={graphql`
+        query MissionRightBottom {
+            wordpressWpMission {
+                acf{
+                    subtitle3
+                    subcontent3
+                }
+            }
+        }
+        `}
+        render={data => (
+            <div>
+                <h1 className="text-center">{data.wordpressWpMission.acf.subtitle3}</h1>
+                <p>{data.wordpressWpMission.acf.subcontent3}</p>
+            </div>
+        )}
+        />
+)

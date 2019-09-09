@@ -11,7 +11,7 @@ export default class MissionSlider extends Component {
     
     return (
       <div>
-        <Slider
+        <Slider className="slider"
         dots={true}
         infinite={true}
         speed={500}
