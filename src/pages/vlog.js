@@ -26,12 +26,12 @@ const VlogPage = ({data}) => {
                     <div className="row">
                         <Col md={4} className="right-top-img"></Col>
                         <Col md={8} className="right-top-text">
-                            <OurTastings />
+                            <OurMission/>
                         </Col>
                     </div>
                     <div className="right-bottom-row">
                         <Col md={12} className="right-bottom-section">
-                            <OurMission />
+                            <OurTastings />
                         </Col>
                     </div>
                 </Col>
