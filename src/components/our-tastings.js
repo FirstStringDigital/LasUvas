@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import "../styles/global.css"
 import IndexStyle from "../styles/index.module.scss"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -19,7 +20,7 @@ export default () => (
             <div>
             <h1 className="text-center">Our Tastings</h1>
             <p>{data.wordpressWpHome.acf.subcontent}</p>
-            <AniLink swipe direction="up" entryOffset={100} to="/tastings" className={IndexStyle.btn}>DISCOVER OUR TASTINGS</AniLink>
+            <AniLink swipe direction="up" entryOffset={100} to="/tastings" className="btn">DISCOVER OUR TASTINGS</AniLink>
             </div>
         )}
         />

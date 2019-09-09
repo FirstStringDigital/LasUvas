@@ -6,7 +6,7 @@ import HomeMain from "../components/index-main"
 import HomeSlider from '../components/carousel'
 import OurTastings from "../components/our-tastings"
 import OurMission from "../components/our-mission"
-import IndexStyle from "../styles/index.module.scss"
+import "../styles/global.css"
 import MainBkgd from '../images/main-background.png'
 
 const IndexPage = () => {
@@ -14,22 +14,22 @@ const IndexPage = () => {
         <Layout>
             <Head title="Home" />
             <div className="row">
-                <Col lg={6} md={12} className={IndexStyle.mainSection}>
+                <Col lg={6} md={12} className="main-section">
                     <HomeMain />
                     <div>
                     <HomeSlider />
                     </div>
-                    <img src={MainBkgd} alt="Glasses of Wine" className={IndexStyle.mainBkgd} />
+                    <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
-                <Col lg={6} md={0} className={IndexStyle.rightSection}>
+                <Col lg={6} md={0} className="right-section">
                     <div className="row">
-                        <Col md={4} className={IndexStyle.rightTopImg}></Col>
-                        <Col md={8} className={IndexStyle.rightTopText}>
+                        <Col md={4} className="right-top-img"></Col>
+                        <Col md={8} className="right-top-text">
                             <OurTastings />
                         </Col>
                     </div>
-                    <div className={IndexStyle.rightBottomRow}>
-                        <Col md={12} className={IndexStyle.rightBottomSection}>
+                    <div className="right-bottom-row">
+                        <Col md={12} className="right-bottom-section">
                             <OurMission />
                         </Col>
                     </div>

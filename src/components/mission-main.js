@@ -24,8 +24,7 @@ export default () => (
                 <div className={MissionStyle.mobileText}>
                     <h1 className="text-center">{data.wordpressWpMission.acf.subtitle2}</h1>
                     <p>{data.wordpressWpMission.acf.subcontent2}</p>
-                    <h1 className="text-center">Contact Us</h1>
-                    <a href="mailto:hola@elevateloscabos.com" className={MissionStyle.btn}>CONTACT</a>
+                    <a href="mailto:hola@elevateloscabos.com" className={MissionStyle.btn}>CONTACT US</a>
                 </div>
             </div>
         )}
