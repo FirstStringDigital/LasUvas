@@ -1,3 +1,15 @@
+/****
+Files include:
+1) header.js
+
+Plugins:
+1) React-Slick Carousel
+***/
+
+
+/** FILES **/
+
+/* header.js */
 .nav-logo {
     width: 10%;
     padding-top: 5px;
@@ -30,4 +42,11 @@
     .nav-logo {
         width: 23%;
     }
+}
+
+/** PLUGINS **/
+
+/* React-Slick Carousel */
+.slick-dots li.slick-active button:before {
+    color: #900561 !important;
 }
