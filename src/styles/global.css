@@ -88,6 +88,7 @@ Plugins:
 
 .main-section-title {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .main-text {
@@ -227,6 +228,38 @@ Plugins:
 /** PLUGINS **/
 
 /* React-Slick Carousel */
+.slick-prev {
+    left: -15px !important;
+    z-index: 100 !important;
+}
+
+.slick-prev:before {
+    color: #900561 !important;
+    font-size: 25px !important;
+}
+
+.slick-next {
+    right: -9px !important;
+}
+
+.slick-next:before {
+    color: #900561 !important;
+    font-size: 25px !important;
+}
+
 .slick-dots li.slick-active button:before {
     color: #900561 !important;
+}
+
+@media (min-width: 992px) {
+    .slick-dots {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .slick-prev, 
+    .slick-next {
+        display: none !important;
+    }
 }

@@ -5,6 +5,7 @@ import ChefsDinner from "../components/chefs-dinner"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TastingSliderStyle from "../styles/tasting-carousel.module.scss"
 import "../styles/global.css"
 
 export default class TastingSlider extends Component {
@@ -19,7 +20,7 @@ export default class TastingSlider extends Component {
         slidesToShow={1}
         swipeToSlide={true}
         >
-          <div>
+          <div  className={TastingSliderStyle.slider}>
               <BasicTasting />
           </div>
           <div>
