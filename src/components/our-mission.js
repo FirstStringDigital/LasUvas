@@ -17,7 +17,7 @@ export default () => (
         `}
         render={data => (
             <div>
-            <h1 className="text-center">Our Mission</h1>
+            <h1 className="text-center">{data.wordpressWpHome.acf.subtitle2}</h1>
             <p>{data.wordpressWpHome.acf.subcontent2}</p>
             <AniLink swipe direction="up" entryOffset={100} to="/mission" className="btn">LEARN MORE</AniLink>
             </div>
