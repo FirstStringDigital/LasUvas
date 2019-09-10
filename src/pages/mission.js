@@ -2,12 +2,12 @@ import React from "react"
 import { Col } from 'react-bootstrap'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import MissionSlider from "../components/mission-slider"
+import MissionSliderDesktop from "../components/mission-slider-desktop"
+import MissionSliderMobile from "../components/mission-slider-mobile"
 import MissionRightTop from "../components/mission-right-top"
 import MissionRightBottom from "../components/mission-right-bottom"
 import "../styles/global.css"
 import MainBkgd from '../images/main-background.png'
-
 
 const MissionPage = () => {
     return (
@@ -15,7 +15,8 @@ const MissionPage = () => {
             <Head title="Mission" />
             <div className="row">
                 <Col lg={6} md={12} className="main-section">
-                    <MissionSlider />
+                    <MissionSliderDesktop />
+                    <MissionSliderMobile />
                     <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>
                 <Col lg={6} md={0} className="right-section">

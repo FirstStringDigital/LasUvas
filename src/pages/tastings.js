@@ -3,6 +3,7 @@ import { Col } from "react-bootstrap"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import TastingSlider from "../components/tasting-slider"
+import BasicTastingDesktop from "../components/basic-tasting-desktop"
 import MidTasting from "../components/mid-tasting"
 import ChefsDinner from "../components/chefs-dinner"
 import "../styles/global.css"
@@ -14,6 +15,7 @@ const TastingsPage = () => {
       <Head title="Tastings" />
       <div className="row">
         <Col lg={6} md={12} className="main-section">
+          <BasicTastingDesktop />
           <TastingSlider />
           <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
         </Col>
