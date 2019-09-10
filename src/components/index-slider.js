@@ -15,7 +15,7 @@ export default class HomelSlider extends Component {
     
     return (
       <div>
-        <Slider
+        <Slider className="index-slider"
         dots={true}
         infinite={true}
         speed={500}

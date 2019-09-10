@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import HomeMain from "../components/index-main"
-import HomeSlider from '../components/carousel'
+import IndexSlider from '../components/index-slider'
 import OurTastings from "../components/our-tastings"
 import OurMission from "../components/our-mission"
 import "../styles/global.css"
@@ -17,7 +17,7 @@ const IndexPage = () => {
                 <Col lg={6} md={12} className="main-section">
                     <HomeMain />
                     <div>
-                    <HomeSlider />
+                    <IndexSlider />
                     </div>
                     <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
                 </Col>

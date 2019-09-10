@@ -12,7 +12,7 @@ export default class TastingSlider extends Component {
     
     return (
       <div>
-        <Slider
+        <Slider className="tasting-slider"
         dots={true}
         infinite={true}
         speed={500}

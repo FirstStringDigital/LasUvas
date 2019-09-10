@@ -17,6 +17,7 @@ export default () => (
         `}
         render={data => (
             <div>
+            <h1 className="main-title-bold">Discover Our Tastings</h1>
             <h1 className="main-section-title">{data.wordpressWpTasting.acf.subtitle}</h1>
             <p className="main-text">{data.wordpressWpTasting.acf.subcontent}</p>
             <p className="price">{data.wordpressWpTasting.acf.price1}</p>
