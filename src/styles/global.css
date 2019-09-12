@@ -230,6 +230,10 @@ Plugins:
         padding: 20px 10px;
     }
 
+    .main-bkgd {
+        opacity: 0.2;
+    }
+
     .btn {
         margin-bottom: 10px;
     }
