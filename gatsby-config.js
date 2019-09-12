@@ -19,12 +19,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'GatsbyJS',
-        short_name: 'Gatsby',
+        name: 'Las Uvas',
+        short_name: 'Las Uvas',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
+        background_color: '#900561',
+        theme_color: '#900561',
+        display: 'standalone',
         icon: 'src/images/las_uvas_logo.png',
       },  // gatsby-plugin-manifest enables the web app manifest required for PWA. Will need to update with a proper icon image and colors for las uvas
     },
@@ -70,9 +70,11 @@ module.exports = {
     'gatsby-plugin-sitemap',
     // this plugin automatically generates a sitemap for your site. 
     
-    'gatsby-plugin-offline',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // this (optional) plugin enables Progressive Web App + Offline functionality. The plugin creates a service worker for us by leveraging Google’s Workbox 
+    // library. We get automatic file caching, enabling pages to be available offline after the user’s first visit.
     //To learn more, visit https://gatsby.dev/offline
+    'gatsby-plugin-offline',
+    
   
     `gatsby-plugin-transition-link`,
     {
