@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Vlog from "../components/vlog-component"
@@ -9,7 +8,7 @@ import "../styles/global.css"
 import { Col } from 'react-bootstrap'
 import MainBkgd from '../images/main-background.png'
 
-const VlogPage = ({data}) => {
+const VlogPage = () => {
     return (
         <Layout>
             <Head title="Friday Night With The Kims" />
@@ -42,17 +41,3 @@ const VlogPage = ({data}) => {
 
 export default VlogPage
 
-export const pageQuery = graphql`
-    query PostQuery {
-        allWordpressPost {
-            edges {
-                node {
-                    id
-                    acf {
-                        youtubeurl
-                    }
-                }
-            }
-        }
-    }
-    `
