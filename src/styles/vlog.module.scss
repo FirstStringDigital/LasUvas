@@ -52,6 +52,11 @@ iframe {
 }
 
 @media (max-width: 575px) {
+    .video-section {
+        overflow: auto;
+        height: 60vh;
+    }
+
     iframe {
          width: 100%;
          height: 32.5vh;
