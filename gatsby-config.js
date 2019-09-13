@@ -9,7 +9,7 @@ module.exports = {
     title: `Las Uvas`,
     description: `Specializing In Mexican Wine Tastings`,
     author: `@gatsbyjs`,
-    siteUrl: 'http://lasuvasmexico.com'
+    siteUrl: 'https://lasuvasmexico.com'
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "lasuvasadmin.com", //"localhost:8888/lasuvas_cms",
+        baseUrl: "localhost:8888/lasuvas_cms", //"lasuvasadmin.com", 
         protocol: "http",
         hostingWPCOM: false,
         useACF: true,
@@ -43,8 +43,8 @@ module.exports = {
         verboseOutput: false,
         perPage: 100,
         searchAndReplaceContentUrls: {
-          sourceUrl: "lasuvasadmin.com", //"localhost:8888/lasuvas_cms"
-          replacementUrl: "lasuvasadmin.com", //"localhost:8888/lasuvas_cms",
+          sourceUrl: "localhost:8888/lasuvas_cms", //"lasuvasadmin.com", 
+          replacementUrl: "localhost:8888/lasuvas_cms", //"lasuvasadmin.com", 
         },
         concurrentRequests: 10,
         includedRoutes: [
@@ -73,8 +73,54 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality. The plugin creates a service worker for us by leveraging Google’s Workbox 
     // library. We get automatic file caching, enabling pages to be available offline after the user’s first visit.
     //To learn more, visit https://gatsby.dev/offline
-    'gatsby-plugin-offline',
-    
+    {
+      resolve: 'gatsby-plugin-offline',
+    options: {
+      preCachePages: [ `/tastings/`, `/mission/`],
+      workboxConfig: {
+        runtimeCaching: [{
+          urlPattern: 'lasuvasmexico.com/',
+          handler: 'NetworkFirst',
+          options: {
+            // Fall back to cache after 10  seconds
+            networkTimeoutSeconds: 10, 
+            // custom cache name for this route
+            cacheName: 'las-uvas-cache',
+            expiration: {
+              // custom cache expiration - how long items can be stored in the cache and how many
+              maxEntries: 5,
+              maxAgeSeconds: 60,
+            },
+            // Background sync: When a service worker detects that a network request has failed, it can register to receive a sync event, which gets delivered 
+            // when the browser thinks connectivity has returned. the sync event can be delivered even if the user has left the application. 
+            backgroundSync: {
+              name: 'las-uvas-queue',
+              options: {
+                maxRetentionTime: 60 * 60,
+            },
+          },
+          // configure which responses are considered cachable
+          cacheableResponse: {
+            statuses: [0, 200],
+          },
+          plugins: [
+            {cacheDidUpdate: () => {
+                const answer = window.confirm(
+                `This application has been updated. ` +
+                  `Reload to display the latest version?`
+                )
+            
+                if (answer === true) {
+                window.location.reload()
+                }
+              }
+            }
+          ],
+        },
+      }],
+    },
+  },
+},
   
     `gatsby-plugin-transition-link`,
     {
@@ -90,3 +136,4 @@ module.exports = {
     }
   ]
 }
+    
