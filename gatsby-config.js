@@ -76,7 +76,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
     options: {
-      preCachePages: [ `/tastings/`, `/mission/`],
+      precachePages: [ `/tastings/`, `/mission/`],
       workboxConfig: {
         runtimeCaching: [{
           urlPattern: 'lasuvasmexico.com/',
