@@ -2,11 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import "../styles/global.css"
 
-const btnStyle = {
-    margin: '0 auto 40px auto',
-    display: 'block'
-};
-
 export default () => (
     <StaticQuery query={graphql`
         query MissionMain {

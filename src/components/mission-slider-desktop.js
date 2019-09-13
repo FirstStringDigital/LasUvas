@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import MissionMain from "../components/mission-main"
-import MissionRightTop from "../components/mission-right-top"
-import MissionRightBottom from "../components/mission-right-bottom"
 import Faqs from "../components/faqs"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
