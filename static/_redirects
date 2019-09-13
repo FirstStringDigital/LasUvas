@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://heuristic-kepler-1bbf99.netlify.com/* https://lasuvasmexico.com/:splat 301!
