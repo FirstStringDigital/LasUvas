@@ -1,26 +1,27 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import "../styles/global.css"
+import TastingStyle from "../styles/tasting.module.scss"
 
 
 export default () => (
     <StaticQuery query={graphql`
-        query ChefsDinner {
+        query BasicTastingDesktop {
             wordpressWpTasting {
                 acf{
-                    subtitle3
-                    subcontent3
-                    price3
+                    subtitle
+                    subcontent
+                    price1
                 }
             }
         }
         `}
         render={data => (
-            <div>
+            <div className={TastingStyle.basicTastingDesktop}>
             <h1 className="main-title-bold">Discover Our Tastings</h1>
-            <h1 className="main-section-title">{data.wordpressWpTasting.acf.subtitle3}</h1>
-            <p className="main-text">{data.wordpressWpTasting.acf.subcontent3}</p>
-            <p className="price">{data.wordpressWpTasting.acf.price3}</p>
+            <h1 className="main-section-title">{data.wordpressWpTasting.acf.subtitle}</h1>
+            <p className="main-text">{data.wordpressWpTasting.acf.subcontent}</p>
+            <p className="price">{data.wordpressWpTasting.acf.price1}</p>
             {/*Calendly*/}
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
             <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>

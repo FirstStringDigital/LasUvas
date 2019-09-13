@@ -21,14 +21,15 @@ export default () => (
         `}
         render={data => (
             <div>
-            {/* Testimonial Text */}
             <div className={TestimonialsStyle.testimonialSection}>
                 {data.allWordpressWpTestimonials.edges.map(document => (
-                    <p className={TestimonialsStyle.testimonialText} key ={document.node.id}>
+                <div className={TestimonialsStyle.testimonialText} key ={document.node.id}>
+                    {/* Testimonial Text */}
                     <p>{document.node.acf.testimonial}</p>
-                {/*Testimonial Name of Person and location */}
-                <p className={TestimonialsStyle.testimonialName}>{document.node.acf.name} - {document.node.acf.location}</p>
-                </p>
+                    {/*Testimonial Name of Person and location */}
+                    <p className={TestimonialsStyle.testimonialName}>{document.node.acf.name} - {document.node.acf.location}</p>
+                    <hr />
+                </div>
                 ))}
             </div>
             </div>
