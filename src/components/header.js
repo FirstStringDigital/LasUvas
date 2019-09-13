@@ -15,10 +15,10 @@ const Header = () => {
             </Col>
             <Col lg={7} md={2} sm={3} xs={4} className="nav-icon-col">
                 <div className="icon-wrapper">
-                    <a href="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className="nav-icon" /></a>
+                    <a href="https://www.instagram.com/lasuvasmexico/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className="nav-icon" /></a>
                 </div>
                 <div className="icon-wrapper">
-                    <a href="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} className="nav-icon" /></a>
+                    <a href="https://www.facebook.com/lasuvasmexico/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} className="nav-icon" /></a>
                 </div>
             </Col>
         </div>
