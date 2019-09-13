@@ -26,6 +26,7 @@ module.exports = {
         theme_color: '#900561',
         display: 'standalone',
         icon: 'src/images/las_uvas_logo.jpg',
+        orientation: 'portrait',
       },  // gatsby-plugin-manifest enables the web app manifest required for PWA. Will need to update with a proper icon image and colors for las uvas
     },
     {
