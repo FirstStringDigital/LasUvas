@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import "../styles/global.css"
-import MainLogo from '../images/las_uvas_logo.png'
+import MainLogo from '../images/las_uvas_logo.jpg'
 
 
 export default () => (
