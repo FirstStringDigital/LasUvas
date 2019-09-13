@@ -5,7 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { Col } from 'react-bootstrap'
-import Logo from '../images/las_uvas_logo.png'
+import Logo from '../images/las_uvas_logo.jpg'
 
 const Header = () => {
     return (
