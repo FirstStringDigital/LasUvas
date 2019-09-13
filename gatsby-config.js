@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "localhost:8888/lasuvas_cms", //"lasuvasadmin.com", 
+        baseUrl: "lasuvasadmin.com", //"localhost:8888/lasuvas_cms", 
         protocol: "http",
         hostingWPCOM: false,
         useACF: true,
@@ -43,8 +43,8 @@ module.exports = {
         verboseOutput: false,
         perPage: 100,
         searchAndReplaceContentUrls: {
-          sourceUrl: "localhost:8888/lasuvas_cms", //"lasuvasadmin.com", 
-          replacementUrl: "localhost:8888/lasuvas_cms", //"lasuvasadmin.com", 
+          sourceUrl: "lasuvasadmin.com", //"localhost:8888/lasuvas_cms", 
+          replacementUrl: "lasuvasadmin.com", //"localhost:8888/lasuvas_cms", 
         },
         concurrentRequests: 10,
         includedRoutes: [
