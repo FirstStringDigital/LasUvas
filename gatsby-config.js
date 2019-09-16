@@ -77,7 +77,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
     options: {
-      precachePages: [ `/tastings/`, `/mission/`],
+      precachePages: ['/tastings/', '/mission/'],
       workboxConfig: {
         runtimeCaching: [{
           urlPattern: 'lasuvasmexico.com/',
@@ -104,19 +104,6 @@ module.exports = {
           cacheableResponse: {
             statuses: [0, 200],
           },
-          plugins: [
-            {cacheDidUpdate: () => {
-                const answer = window.confirm(
-                `This application has been updated. ` +
-                  `Reload to display the latest version?`
-                )
-            
-                if (answer === true) {
-                window.location.reload()
-                }
-              }
-            }
-          ],
         },
       }],
     },
