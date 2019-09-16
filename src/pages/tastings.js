@@ -1,7 +1,7 @@
 import React from "react"
 import { Col } from "react-bootstrap"
 import Layout from "../components/layout"
-import Head from "../components/head"
+import SEO from "../components/seo"
 import TastingSlider from "../components/tasting-slider"
 import BasicTastingDesktop from "../components/basic-tasting-desktop"
 import MidTasting from "../components/mid-tasting"
@@ -12,7 +12,7 @@ import MainBkgd from "../images/main-background.png"
 const TastingsPage = () => {
   return (
     <Layout>
-      <Head title="Tastings" />
+      <SEO title="Tastings" />
       <div className="row">
         <Col lg={6} md={12} className="main-section">
           <BasicTastingDesktop />
