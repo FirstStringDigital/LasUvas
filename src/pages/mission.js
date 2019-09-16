@@ -12,7 +12,7 @@ import MainBkgd from '../images/main-background.png'
 const MissionPage = () => {
     return (
         <Layout>
-            <SEO title="Mission" />
+            <SEO title="Our Mission" />
             <div className="row">
                 <Col lg={6} md={12} className="main-section">
                     <MissionSliderDesktop />
