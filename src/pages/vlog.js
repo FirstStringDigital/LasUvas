@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import Head from "../components/head"
+import SEO from "../components/seo"
 import Vlog from "../components/vlog-component"
 import OurTastings from "../components/our-tastings"
 import OurMission from "../components/our-mission"
@@ -11,7 +11,7 @@ import MainBkgd from "../images/main-background.png"
 const VlogPage = () => {
   return (
     <Layout>
-      <Head title="Friday Night With The Kims" />
+      <SEO title="Friday Night With The Kims" />
       <div className="row">
         <Col lg={6} md={12} className="main-section">
           <h1 className="main-title-bold">Vlog</h1>

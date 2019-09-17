@@ -1,7 +1,7 @@
 import React from "react"
 import { Col } from 'react-bootstrap'
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from "../components/seo"
 import HomeMain from "../components/index-main"
 import IndexSlider from '../components/index-slider'
 import OurTastings from "../components/our-tastings"
@@ -12,7 +12,7 @@ import MainBkgd from '../images/main-background.png'
 const IndexPage = () => {
     return (
         <Layout>
-            <Head title="Home" />
+            <SEO title="Welcome To Las Uvas" />
             <div className="row">
                 <Col lg={6} md={12} className="main-section">
                     <HomeMain />

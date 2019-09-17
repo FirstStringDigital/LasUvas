@@ -1,7 +1,7 @@
 import React from "react"
 import { Col } from 'react-bootstrap'
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from "../components/seo"
 import Testimonials from "../components/testimonials-component"
 import OurTastings from "../components/our-tastings"
 import OurMission from "../components/our-mission"
@@ -11,7 +11,7 @@ import MainBkgd from '../images/main-background.png'
 const TestimonialsPage = () => {
     return (
         <Layout>
-            <Head title="Testimonials" />
+            <SEO title="Testimonials" />
             <div className="row">
                 <Col lg={6} md={12} className="main-section">
                     <h1 className="main-title-bold">Testimonials</h1>

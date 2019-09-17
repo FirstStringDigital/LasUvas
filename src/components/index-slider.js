@@ -23,16 +23,16 @@ export default class HomelSlider extends Component {
         swipeToSlide={true}
         >
           <AniLink swipe direction="up" entryOffset={100} to="/tastings" >
-            <img src={Tastings} alt="Wine Tasting" className={HomeCarouselStyle.carouselImg} />
+            <img src={Tastings} alt="Las Uvas Wine Tasting" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
           <AniLink swipe direction="up" entryOffset={100} to="/mission" >
-          <img src={Mission} alt="Mission" className={HomeCarouselStyle.carouselImg} />
+          <img src={Mission} alt="Las Uvas Mission" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
           <AniLink swipe direction="up" entryOffset={100} to="/vlog" >
-          <img src={Vlog} alt="Vlog" className={HomeCarouselStyle.carouselImg} />
+          <img src={Vlog} alt="Las Uvas Vlog" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
           <AniLink swipe direction="up" entryOffset={100} to="/testimonials" >
-          <img src={Testimonial} alt="Testimonial" className={HomeCarouselStyle.carouselImg} />
+          <img src={Testimonial} alt="Las Uvas Testimonial" className={HomeCarouselStyle.carouselImg} />
           </AniLink>
         </Slider>
       </div>
