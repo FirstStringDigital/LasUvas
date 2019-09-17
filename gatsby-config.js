@@ -80,8 +80,8 @@ module.exports = {
       precachePages: ['/tastings/', '/mission/'],
       workboxConfig: {
         importWorkboxFrom: `cdn`,
-        runtimeCaching: [{
-          urlPattern: '/(\.js$|\.css$|static\/)/(png|jpg|jpeg)$/',
+        runtimeCaching: [{ 
+          //urlPattern: '/(\.js$|\.css$|static\/)/(png|jpg|jpeg)$/',
           handler: 'NetworkFirst',
           options: {
             // Fall back to cache after 10  seconds
