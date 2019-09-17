@@ -82,7 +82,7 @@ module.exports = {
         importWorkboxFrom: `cdn`,
         runtimeCaching: [{
           urlPattern: '/(\.js$|\.css$|static\/)/(png|jpg|jpeg)$/',
-          handler: 'CacheFirst',
+          handler: 'NetworkFirst',
           options: {
             // Fall back to cache after 10  seconds
             networkTimeoutSeconds: 10, 
