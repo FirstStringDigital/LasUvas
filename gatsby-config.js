@@ -77,11 +77,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
     options: {
-      precachePages: ['/tastings/', '/mission/', '/images/'],
+      precachePages: ['/tastings/', '/mission/'],
       workboxConfig: {
+        importWorkboxFrom: `cdn`,
         runtimeCaching: [{
-          urlPattern: 'lasuvasmexico.com/',
-          handler: 'NetworkFirst',
+          urlPattern: '/(\.js$|\.css$|static\/)/(png|jpg|jpeg)$/',
+          handler: 'CacheFirst',
           options: {
             // Fall back to cache after 10  seconds
             networkTimeoutSeconds: 10, 
