@@ -81,7 +81,7 @@ module.exports = {
       workboxConfig: {
         importWorkboxFrom: `cdn`,
         runtimeCaching: [{ 
-          urlPattern: '/.*\.(?:png|jpg|jpeg|svg|gif)/',
+          urlPattern: 'lasuvasmexico/.*',
           handler: 'NetworkFirst',
           options: {
             // Fall back to cache after 10  seconds
