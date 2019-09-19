@@ -24,8 +24,6 @@ export default () => (
             <div className={VlogStyle.videoSection}>{data.allWordpressPost.edges.map(document => (
             <li key={document.node.id}>
                 <Video videoSrcURL={document.node.acf.youtubeurl} videoTitle="Featured Video"/>
-                <Video videoSrcURL={document.node.acf.youtubeurl} videoTitle="Featured Video"/>
-                <Video videoSrcURL={document.node.acf.youtubeurl} videoTitle="Featured Video"/>
             </li>
             ))}
             </div>
