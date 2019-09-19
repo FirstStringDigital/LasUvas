@@ -87,9 +87,10 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
     options: {
       precachePages: ['/tastings/', '/mission/'],
-      workboxConfig: {
-        runtimeCaching: [{
-          urlPattern: 'lasuvasmexico.com/',
+      /* workboxConfig: {
+        importWorkboxFrom: `cdn`,
+        runtimeCaching: [{ 
+          urlPattern: 'lasuvasmexico/.*',
           handler: 'NetworkFirst',
           options: {
             // Fall back to cache after 10  seconds
@@ -115,7 +116,7 @@ module.exports = {
           },
         },
       }],
-    },
+    }, */
   },
 },
   
