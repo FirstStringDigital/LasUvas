@@ -85,7 +85,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
     options: {
-      precachePages: ['/mission/'],
+      precachePages: ['/tastings/','/mission/'],
   },
 },
   
