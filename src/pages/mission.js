@@ -1,7 +1,7 @@
 import React from "react"
 import { Col } from 'react-bootstrap'
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from "../components/seo"
 import MissionSliderDesktop from "../components/mission-slider-desktop"
 import MissionSliderMobile from "../components/mission-slider-mobile"
 import MissionRightTop from "../components/mission-right-top"
@@ -12,7 +12,7 @@ import MainBkgd from '../images/main-background.png'
 const MissionPage = () => {
     return (
         <Layout>
-            <Head title="Mission" />
+            <SEO title="Our Mission" />
             <div className="row">
                 <Col lg={6} md={12} className="main-section">
                     <MissionSliderDesktop />
