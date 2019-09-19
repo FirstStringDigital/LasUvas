@@ -25,7 +25,7 @@ export default () => (
             {/*Calendly*/}
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
             <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-            <a className="btn" href="https://calendly.com/elevateloscabos/las-uvas-wine-tasting"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elevateloscabos/las-uvas-wine-tasting'});return false;">BOOK BASIC TASTING</a>
+            <a className="btn" href="https://calendly.com/lasuvas/basic-tasting?text_color=000000&primary_color=900561"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lasuvas/basic-tasting'});return false;">BOOK BASIC TASTING</a>
             {/*Calendly*/}
             </div>
         )}
