@@ -81,8 +81,7 @@ module.exports = {
     // this plugin automatically generates a sitemap for your site. 
     
     // this (optional) plugin enables Progressive Web App + Offline functionality. The plugin creates a service worker for us by leveraging Google’s Workbox 
-    // library. We get automatic file caching, enabling pages to be available offline after the user’s first visit.
-    //To learn more, visit https://gatsby.dev/offline
+    // library. We get automatic file caching, enabling pages to be available offline after the user’s first visit. To learn more, visit https://gatsby.dev/offline
     {
       resolve: 'gatsby-plugin-offline',
     options: {
