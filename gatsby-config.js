@@ -81,42 +81,11 @@ module.exports = {
     // this plugin automatically generates a sitemap for your site. 
     
     // this (optional) plugin enables Progressive Web App + Offline functionality. The plugin creates a service worker for us by leveraging Google’s Workbox 
-    // library. We get automatic file caching, enabling pages to be available offline after the user’s first visit.
-    //To learn more, visit https://gatsby.dev/offline
+    // library. We get automatic file caching, enabling pages to be available offline after the user’s first visit. To learn more, visit https://gatsby.dev/offline
     {
       resolve: 'gatsby-plugin-offline',
     options: {
-      precachePages: ['/tastings/', '/mission/'],
-      /* workboxConfig: {
-        importWorkboxFrom: `cdn`,
-        runtimeCaching: [{ 
-          urlPattern: 'lasuvasmexico/.*',
-          handler: 'NetworkFirst',
-          options: {
-            // Fall back to cache after 10  seconds
-            networkTimeoutSeconds: 10, 
-            // custom cache name for this route
-            cacheName: 'las-uvas-cache',
-            expiration: {
-              // custom cache expiration - how long items can be stored in the cache and how many
-              maxEntries: 5,
-              maxAgeSeconds: 60,
-            },
-            // Background sync: When a service worker detects that a network request has failed, it can register to receive a sync event, which gets delivered 
-            // when the browser thinks connectivity has returned. the sync event can be delivered even if the user has left the application. 
-            backgroundSync: {
-              name: 'las-uvas-queue',
-              options: {
-                maxRetentionTime: 60 * 60,
-            },
-          },
-          // configure which responses are considered cachable
-          cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
-      }],
-    }, */
+      precachePages: ['/tastings/','/mission/'],
   },
 },
   
