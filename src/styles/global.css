@@ -273,7 +273,7 @@ Plugins:
     }
 
     .main-section {
-        height: 150%;
+        height: 165vh;
     }
 
     .main-logo {
@@ -295,14 +295,47 @@ Plugins:
   /* Portrait Orientation for iPhoneX */
   @media screen and (min-width: 800px) and (max-width: 850px) and (orientation: landscape) {
     body {
-      transform: rotate(-90deg);
-      transform-origin: left top;
-      width: 100vh;
-      overflow-x: hidden;
-      position: absolute;
-      top: 100%;
-      left: 0;
-    }
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 216vh !important;
+        overflow-x: hidden !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+  
+      .nav-logo-col {
+          flex: 0 0 70%;
+          max-width: 70%;
+      }
+  
+      .nav-icon-col {
+          flex: 0 0 30%;
+          max-width: 30%;
+      }
+  
+      .nav-logo {
+          width: 23%;
+      }
+  
+      .main-section {
+          height: 202vh;
+      }
+  
+      .main-logo {
+          width: 200px;
+          padding-top: 20px;
+      }
+  
+      .main-text {
+          font-size: 20px;
+          padding: 20px 10px;
+      }
+  
+      .main-bkgd {
+          opacity: 0.2;
+      }
   }
 
 
