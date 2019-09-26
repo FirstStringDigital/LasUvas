@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/global.css"
 import TastingStyle from "../styles/tasting.module.scss"
+import TastingIntro from "./tasting-intro";
 
 export default class TastingSlider extends Component {
   render() {
@@ -20,6 +21,9 @@ export default class TastingSlider extends Component {
         slidesToShow={1}
         swipeToSlide={true}
         >
+          <div>
+              <TastingIntro />
+          </div>
           <div>
               <BasicTastingMobile />
           </div>
