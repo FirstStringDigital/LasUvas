@@ -247,7 +247,7 @@ Plugins:
 }
 
 /** Portrait Orientation **/
-/*@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
     body {
       transform: rotate(-90deg);
       transform-origin: left top;
@@ -291,10 +291,10 @@ Plugins:
         opacity: 0.2;
     }
     
-  } */
+  }
 
   /* Portrait Orientation for iPhoneX */
-  /*@media screen and (min-width: 800px) and (max-width: 850px) and (orientation: landscape) {
+  @media screen and (min-width: 800px) and (max-width: 850px) and (orientation: landscape) {
     body {
         transform: rotate(-90deg);
         transform-origin: left top;
@@ -337,7 +337,7 @@ Plugins:
       .main-bkgd {
           opacity: 0.2;
       }
-  } */
+  }
 
 
 /** PLUGINS **/
