@@ -14,7 +14,7 @@ const IndexPage = () => {
         <Layout>
             <SEO title="Los Cabos Wine Tasting Experience" />
             <div className="row">
-                <Col lg={6} md={12} className="main-section">
+                <Col lg={6} md={12} className="main-section home-main-section">
                     <HomeMain />
                     <div>
                     <IndexSlider />
