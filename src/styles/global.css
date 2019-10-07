@@ -246,6 +246,18 @@ Plugins:
     }
 }
 
+@media (max-height: 750px) {
+    .home-main-section {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 700px) {
+    .home-main-section {
+        margin-bottom: 130px;
+    }
+}
+
 /** Portrait Orientation **/
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
     body {
