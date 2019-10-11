@@ -2,6 +2,7 @@
 1) Header Nav
 2) Page Framework
 3) Portrait Orientation
+4) Offline Text for Tastings Page
 
 Plugins:
 1) React-Slick Carousel
@@ -305,8 +306,8 @@ Plugins:
     
   }
 
-  /* Portrait Orientation for iPhoneX */
-  @media screen and (min-width: 800px) and (max-width: 850px) and (orientation: landscape) {
+/* Portrait Orientation for iPhoneX */
+@media screen and (min-width: 800px) and (max-width: 850px) and (orientation: landscape) {
     body {
         transform: rotate(-90deg);
         transform-origin: left top;
@@ -350,6 +351,13 @@ Plugins:
           opacity: 0.2;
       }
   }
+
+/* Offline Text for Tastings Page */
+.offline-text {
+    color: #900561;
+    text-align: center;
+    font-weight: bold;
+}
 
 
 /** PLUGINS **/
