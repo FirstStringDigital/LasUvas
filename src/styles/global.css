@@ -2,7 +2,7 @@
 1) Header Nav
 2) Page Framework
 3) Portrait Orientation
-4) Offline Text for Tastings Page
+4) Offline Text
 
 Plugins:
 1) React-Slick Carousel
@@ -353,10 +353,17 @@ Plugins:
   }
 
 /* Offline Text for Tastings Page */
-.offline-text {
+.offline-text-tasting {
     color: #900561;
     text-align: center;
     font-weight: bold;
+}
+
+.offline-text-vlog {
+    color: #900561;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
 }
 
 

@@ -29,7 +29,7 @@ export default () => (
             <a className="btn" href="https://calendly.com/lasuvas/chefs-dinner?text_color=000000&primary_color=900561"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lasuvas/chefs-dinner'});return false;">BOOK CHEF'S DINNER</a>
             {/*Calendly*/}
             </Online>
-            <Offline><p className="offline-text">You must be online to book an event.</p></Offline>
+            <Offline><p className="offline-text-tasting">You must be online to book an event.</p></Offline>
             </div>
         )}
         />
