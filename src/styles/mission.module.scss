@@ -30,6 +30,7 @@
 }
 
 .card-body {
+    text-align: justify;
     height: 200px;
     overflow: auto;
 }
@@ -43,5 +44,11 @@
 @media (max-width: 991px) {
     .slider-desktop {
         display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .accordion-section {
+        padding: 20px 0;
     }
 }

@@ -12,9 +12,9 @@ import MainBkgd from '../images/main-background.png'
 const IndexPage = () => {
     return (
         <Layout>
-            <SEO title="Welcome To Las Uvas" />
+            <SEO title="Los Cabos Wine Tasting Experience" />
             <div className="row">
-                <Col lg={6} md={12} className="main-section">
+                <Col lg={6} md={12} className="main-section home-main-section">
                     <HomeMain />
                     <div>
                     <IndexSlider />

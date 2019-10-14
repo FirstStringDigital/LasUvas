@@ -2,11 +2,12 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Offline, Online } from "react-detect-offline"
 import "../styles/global.css"
+import TastingStyle from "../styles/tasting.module.scss"
 
 
 export default () => (
     <StaticQuery query={graphql`
-        query ChefsDinner {
+        query ChefsDinnerDesktop {
             wordpressWpTasting {
                 acf{
                     subtitle3
@@ -17,7 +18,7 @@ export default () => (
         }
         `}
         render={data => (
-            <div>
+            <div className={TastingStyle.chefsDinnerDesktop}>
             <h1 className="main-title-bold">Discover Our Tastings</h1>
             <h1 className="main-section-title">{data.wordpressWpTasting.acf.subtitle3}</h1>
             <p className="main-text">{data.wordpressWpTasting.acf.subcontent3}</p>

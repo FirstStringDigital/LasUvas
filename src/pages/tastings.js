@@ -3,9 +3,9 @@ import { Col } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TastingSlider from "../components/tasting-slider"
-import BasicTastingDesktop from "../components/basic-tasting-desktop"
+import BasicTasting from "../components/basic-tasting"
 import MidTasting from "../components/mid-tasting"
-import ChefsDinner from "../components/chefs-dinner"
+import ChefsDinnerDesktop from "../components/chefs-dinner-desktop"
 import "../styles/global.css"
 import MainBkgd from "../images/main-background.png"
 
@@ -15,7 +15,7 @@ const TastingsPage = () => {
       <SEO title="Our Tastings" />
       <div className="row">
         <Col lg={6} md={12} className="main-section">
-          <BasicTastingDesktop />
+          <ChefsDinnerDesktop/>
           <TastingSlider />
           <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
         </Col>
@@ -28,7 +28,7 @@ const TastingsPage = () => {
           </div>
           <div className="right-bottom-row">
             <Col md={12} className="right-bottom-section">
-              <ChefsDinner />
+            <BasicTasting />
             </Col>
           </div>
         </Col>

@@ -34,7 +34,7 @@ module.exports = {
         background_color: '#900561',
         theme_color: '#900561',
         display: 'standalone',
-        icon: 'src/images/las_uvas_logo.jpg',
+        icon: 'src/images/las_uvas_logo.png',
         orientation: 'portrait',
       },  // gatsby-plugin-manifest enables the web app manifest required for PWA. Will need to update with a proper icon image and colors for las uvas
     },
@@ -100,7 +100,15 @@ module.exports = {
           },
         ],
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-119405948-8",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+      },
+    },
   ]
 }
     

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import BasicTastingMobile from "./basic-tasting-mobile"
+import TastingIntro from "./tasting-intro";
+import BasicTasting from "./basic-tasting"
 import MidTasting from "../components/mid-tasting"
 import ChefsDinner from "../components/chefs-dinner"
 import Slider from "react-slick";
@@ -7,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/global.css"
 import TastingStyle from "../styles/tasting.module.scss"
-import TastingIntro from "./tasting-intro";
 
 export default class TastingSlider extends Component {
   render() {
@@ -25,7 +25,7 @@ export default class TastingSlider extends Component {
               <TastingIntro />
           </div>
           <div>
-              <BasicTastingMobile />
+              <BasicTasting />
           </div>
           <div>
               <MidTasting />
