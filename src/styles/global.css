@@ -95,18 +95,21 @@ Plugins:
 
 .main-text {
     text-align: center;
-    padding: 20px 50px;
+    padding: 10px 50px;
     margin-bottom: 0;
 }
 
 .price {
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0 !important;
 }
 
 .price-qualifier {
     text-align: center;
-    padding-top: 0;
+    padding-top: 0 !important;
+    font-size: 12px;
+    font-style: italic;
 
 }
 
@@ -148,14 +151,13 @@ Plugins:
     display: none;
 }
 
-.right-top-text p {
-    padding: 20px 0;
+.right-top-text .main-text {
+    padding: 10px 0;
     margin-bottom: 0;
 }
 
 .right-top-text .price {
     padding: 0;
-    margin-bottom: 20px;
 }
 
 .right-bottom-row {
@@ -184,15 +186,14 @@ Plugins:
     display: none;
 }
 
-.right-bottom-section p {
+.right-bottom-section .main-text {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     margin-bottom: 0;
 }
 
 .right-bottom-section .price {
     padding: 0;
-    margin-bottom: 20px;
 }
 
 @media (min-width: 1054px) and (max-width: 1184px) {
