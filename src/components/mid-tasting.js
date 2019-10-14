@@ -12,6 +12,7 @@ export default () => (
                     subtitle2
                     subcontent2
                     price2
+                    price2Qualifier
                 }
             }
         }
@@ -22,6 +23,7 @@ export default () => (
             <h1  className="main-section-title">{data.wordpressWpTasting.acf.subtitle2}</h1>
             <p className="main-text">{data.wordpressWpTasting.acf.subcontent2}</p>
             <p className="price">{data.wordpressWpTasting.acf.price2}</p>
+            <p className="price-qualifier">{data.wordpressWpTasting.acf.price2Qualifier}</p>
             <Online>
             {/*Calendly*/}
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
