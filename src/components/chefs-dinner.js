@@ -9,12 +9,12 @@ export default () => (
         query ChefsDinner {
             wordpressWpTasting {
                 acf{
-                    subtitle3
-                    subcontent3
-                    price3
-                    price3Qualifier
-                    price3premium
-                    price3PremiumQualifier
+                    premiumTastingTitle
+                    premiumTastingContent
+                    premiumRegularPrice
+                    premRegQualifier
+                    extraPremPrice
+                    extraPremQualifier
                 }
             }
         }
@@ -22,12 +22,12 @@ export default () => (
         render={data => (
             <div>
             <h1 className="main-title-bold">Discover Our Tastings</h1>
-            <h1 className="main-section-title">{data.wordpressWpTasting.acf.subtitle3}</h1>
-            <p className="main-text">{data.wordpressWpTasting.acf.subcontent3}</p>
-            <p className="price">{data.wordpressWpTasting.acf.price3}</p>
-            <p className="price-qualifier">{data.wordpressWpTasting.acf.price3Qualifier}</p>
-            <p className="price">{data.wordpressWpTasting.acf.price3premium}</p>
-            <p className="price-qualifier">{data.wordpressWpTasting.acf.price3PremiumQualifier}</p>
+            <h1 className="main-section-title">{data.wordpressWpTasting.acf.premiumTastingTitle}</h1>
+            <p className="main-text">{data.wordpressWpTasting.acf.premiumTastingContent}</p>
+            <p className="price">{data.wordpressWpTasting.acf.premiumRegularPrice}</p>
+            <p className="price-qualifier">{data.wordpressWpTasting.acf.premRegQualifier}</p>
+            <p className="price">{data.wordpressWpTasting.acf.extraPremPrice}</p>
+            <p className="price-qualifier">{data.wordpressWpTasting.acf.extraPremQualifier}</p>
             <Online>
             {/*Calendly*/}
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>

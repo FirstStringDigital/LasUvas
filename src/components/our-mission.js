@@ -9,16 +9,16 @@ export default () => (
         query OurMission {
             wordpressWpHome {
                 acf{
-                    subtitle2
-                    subcontent2
+                    ourMissionTitle
+                    ourMissionContent
                 }
             }
         }
         `}
         render={data => (
             <div>
-            <h1 className="text-center">{data.wordpressWpHome.acf.subtitle2}</h1>
-            <p>{data.wordpressWpHome.acf.subcontent2}</p>
+            <h1 className="text-center">{data.wordpressWpHome.acf.ourMissionTitle}</h1>
+            <p>{data.wordpressWpHome.acf.ourMissionContent}</p>
             <AniLink swipe direction="up" entryOffset={100} to="/mission" className="btn">ABOUT LAS UVAS</AniLink>
             </div>
         )}

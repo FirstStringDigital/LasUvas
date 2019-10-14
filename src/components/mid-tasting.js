@@ -9,10 +9,10 @@ export default () => (
         query MidTasting {
             wordpressWpTasting {
                 acf{
-                    subtitle2
-                    subcontent2
-                    price2
-                    price2Qualifier
+                    midlevelTastingTitle
+                    midlevelTastingContent
+                    midPrice
+                    midPriceQualifier
                 }
             }
         }
@@ -20,10 +20,10 @@ export default () => (
         render={data => (
             <div>
             <h1 className="main-title-bold">Discover Our Tastings</h1>
-            <h1  className="main-section-title">{data.wordpressWpTasting.acf.subtitle2}</h1>
-            <p className="main-text">{data.wordpressWpTasting.acf.subcontent2}</p>
-            <p className="price">{data.wordpressWpTasting.acf.price2}</p>
-            <p className="price-qualifier">{data.wordpressWpTasting.acf.price2Qualifier}</p>
+            <h1  className="main-section-title">{data.wordpressWpTasting.acf.midlevelTastingTitle}</h1>
+            <p className="main-text">{data.wordpressWpTasting.acf.midlevelTastingContent}</p>
+            <p className="price">{data.wordpressWpTasting.acf.midPrice}</p>
+            <p className="price-qualifier">{data.wordpressWpTasting.acf.midPriceQualifier}</p>
             <Online>
             {/*Calendly*/}
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>

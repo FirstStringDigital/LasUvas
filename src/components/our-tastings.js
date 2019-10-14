@@ -9,16 +9,16 @@ export default () => (
         query OurTastings {
             wordpressWpHome {
                 acf{
-                    subtitle
-                    subcontent
+                    ourTastingsTitle
+                    ourTastingsContent
                 }
             }
         }
         `}
         render={data => (
             <div>
-            <h1 className="text-center">{data.wordpressWpHome.acf.subtitle}</h1>
-            <p>{data.wordpressWpHome.acf.subcontent}</p>
+            <h1 className="text-center">{data.wordpressWpHome.acf.ourTastingsTitle}</h1>
+            <p>{data.wordpressWpHome.acf.ourTastingsContent}</p>
             <AniLink swipe direction="up" entryOffset={100} to="/tastings" className="btn">DISCOVER OUR TASTINGS</AniLink>
             </div>
         )}
