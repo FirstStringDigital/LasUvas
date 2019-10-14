@@ -16,7 +16,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     //'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`, // *****Is this a duplicate? Look on line 80. Same Plugin.*****
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
