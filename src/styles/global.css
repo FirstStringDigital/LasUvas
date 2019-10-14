@@ -108,6 +108,8 @@ Plugins:
 .price-qualifier {
     text-align: center;
     padding-top: 0 !important;
+    font-size: 12px;
+    font-style: italic;
 
 }
 
