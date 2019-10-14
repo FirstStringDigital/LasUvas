@@ -12,7 +12,7 @@ import MainBkgd from "../images/main-background.png"
 const TastingsPage = () => {
   return (
     <Layout>
-      <SEO title="Our Tastings" />
+      <SEO title="Wine Tasting Services" />
       <div className="row">
         <Col lg={6} md={12} className="main-section">
           <ChefsDinnerDesktop/>
