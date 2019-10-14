@@ -9,7 +9,7 @@ export default () => (
         query HomeMain {
             wordpressWpHome {
                 acf{
-                    content
+                    welcomeContent
                 }
             }
         }
@@ -17,7 +17,7 @@ export default () => (
         render={data => (
             <div>
             <img src={MainLogo} alt="Las Uvas Logo" className="main-logo" />
-            <p className="main-text">{data.wordpressWpHome.acf.content}</p>
+            <p className="main-text">{data.wordpressWpHome.acf.welcomeContent}</p>
         </div>
         )}
         />

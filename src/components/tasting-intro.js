@@ -8,8 +8,8 @@ export default () => (
         query TastingIntro {
             wordpressWpHome {
                 acf{
-                    subtitle
-                    subcontent
+                    ourTastingsTitle
+                    ourTastingsContent
                 }
             }
         }
@@ -17,8 +17,8 @@ export default () => (
         render={data => (
             <div>
             <h1 className="main-title-bold">Discover Our Tastings</h1>
-            <h1 className="main-section-title">{data.wordpressWpHome.acf.subtitle}</h1>
-            <p className="main-text">{data.wordpressWpHome.acf.subcontent}</p>
+            <h1 className="main-section-title">{data.wordpressWpHome.acf.ourTastingsTitle}</h1>
+            <p className="main-text">{data.wordpressWpHome.acf.ourTastingsContent}</p>
             </div>
         )}
         />
