@@ -19,7 +19,7 @@ export default () => (
                 <h1 className="main-title-bold">Our Mission</h1>
                 <h1 className="text-center main-section-title">{data.wordpressWpMission.acf.contactUsTitle}</h1>
                 <p className="text-center main-text">{data.wordpressWpMission.acf.contactUsContent}</p>
-                <a href="mailto:hola@elevateloscabos.com" className="btn">CONTACT US</a>
+                <a href="mailto:hola@lasuvasmexico.com" className="btn">CONTACT US</a>
             </div>
         )}
         />

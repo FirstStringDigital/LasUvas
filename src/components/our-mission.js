@@ -19,7 +19,7 @@ export default () => (
             <div>
             <h1 className="text-center">{data.wordpressWpHome.acf.ourMissionTitle}</h1>
             <p>{data.wordpressWpHome.acf.ourMissionContent}</p>
-            <AniLink swipe direction="up" entryOffset={100} to="/mission" className="btn">ABOUT LAS UVAS</AniLink>
+            <AniLink swipe direction="up" entryOffset={100} to="/mission" className="btn">LEARN MORE</AniLink>
             </div>
         )}
         />
