@@ -222,6 +222,7 @@ Plugins:
     }
 
     .main-bkgd {
+        position: sticky;
         left: 17%;
         width: 70%;
     }
@@ -247,7 +248,6 @@ Plugins:
     }
 
     .main-bkgd {
-        position: sticky;
         left: 11%;
         width: 85%;
         opacity: 0.2;
