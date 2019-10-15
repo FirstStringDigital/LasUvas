@@ -394,14 +394,9 @@ Plugins:
     font-size: 25px !important;
 }
 
-.tasting-slider .slick-prev,
-.tasting-slider .slick-next {
-    top: 74% !important;
-}
-
 .mission-slider .slick-prev,
 .mission-slider .slick-next {
-    top: 71% !important;
+    top: 48% !important;
 }
 
 
