@@ -1,4 +1,5 @@
 // Displays a confirmation prompt when the service worker finds an update askng the user to update the page to display the latest version. 
+ /* eslint-disable */
 
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(

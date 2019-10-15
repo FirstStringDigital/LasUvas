@@ -213,13 +213,17 @@ Plugins:
         height: 93.5vh;
     }
 
+    .main-title-bold {
+        margin-top: 20px;
+    }
+
     .main-text {
         font-size: 25px;
     }
 
     .main-bkgd {
-        left: 12%;
-        width: 85%;
+        left: 17%;
+        width: 70%;
     }
 
     .right-section {
@@ -233,12 +237,19 @@ Plugins:
         padding-top: 20px;
     }
 
+    .main-title-bold {
+        margin-top: 0;
+    }
+
     .main-text {
         font-size: 20px;
         padding: 20px 10px;
     }
 
     .main-bkgd {
+        position: sticky;
+        left: 11%;
+        width: 85%;
         opacity: 0.2;
     }
 
@@ -250,18 +261,6 @@ Plugins:
 @media (max-width:387px) {
     .main-title-bold {
         font-size: 40px;
-    }
-}
-
-@media (max-height: 750px) {
-    .home-main-section {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-height: 700px) {
-    .home-main-section {
-        margin-bottom: 130px;
     }
 }
 
@@ -395,14 +394,9 @@ Plugins:
     font-size: 25px !important;
 }
 
-.tasting-slider .slick-prev,
-.tasting-slider .slick-next {
-    top: 74% !important;
-}
-
 .mission-slider .slick-prev,
 .mission-slider .slick-next {
-    top: 71% !important;
+    top: 48% !important;
 }
 
 
@@ -430,17 +424,5 @@ Plugins:
     .slick-list {
         z-index: 20;
         margin-top: 50px !important;
-    }
-
-    .slick-dots {
-        top: -20px;
-        z-index: 10;
-        margin-top: -10px !important;
-    }
-
-    .index-slider .slick-dots {
-        top: auto;
-        z-index: auto;
-        margin: 0 !important;
     }
 }
