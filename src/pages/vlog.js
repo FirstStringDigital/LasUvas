@@ -16,6 +16,7 @@ const VlogPage = () => {
         <Col lg={6} md={12} className="main-section">
           <h1 className="main-title-bold">Vlog</h1>
           <h1 className="main-section-title">Friday Night With The Kims</h1>
+          <p className="main-text">Our featured video blog (vlog) of our wine experiences in Mexico!</p>
           <Vlog />
           <img src={MainBkgd} alt="Glasses of Wine" className="main-bkgd" />
         </Col>
