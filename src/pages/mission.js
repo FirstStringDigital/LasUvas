@@ -13,7 +13,7 @@ const MissionPage = () => {
     return (
         <Layout>
             <SEO title="Our Mission" />
-            <div className="row">
+            <div className="row mission-page">
                 <Col lg={6} md={12} className="main-section">
                     <MissionSliderDesktop />
                     <MissionSliderMobile />
