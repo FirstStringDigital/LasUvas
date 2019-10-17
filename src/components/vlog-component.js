@@ -31,7 +31,7 @@ export default () => (
             </div>
             </Online>
             <Offline>
-                <p className="offline-text-vlog">You must be online to view our VLOG.</p> 
+                <p className="offline-text-vlog">You must connect to the internet to view our VLOG.</p> 
             </Offline>
             </div>
         )}
